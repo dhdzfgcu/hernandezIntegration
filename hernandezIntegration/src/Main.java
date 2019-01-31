@@ -7,7 +7,7 @@ public class Main {
     /*
      * A byte is a data type that is composed of 8 bits signed two's complement integer. Min value
      * is -128 and a maximum of 127 (inclusive). Useful for saving memory in large arrays, also can
-     * be used in place of int Short data type is 16 bit signed two's complement integer, min value
+     * be used in place of int. Short data type is 16 bit signed two's complement integer, min value
      * of -32768, and a maximum of 32767 inclusive. Same guidelines with byte Int is a 32 bit same
      * stuff above. min value of -2^31, max value of (2^31)-1.In java se 8 and higher the int type
      * can be used to rep an unsigned 32 bit integer, which has a min value of 0 and max value of
@@ -47,10 +47,14 @@ public class Main {
     System.out.println("Here's the length of the string string1:" + " " + method1);
     String method2 = string1.substring(0, 1).toUpperCase() + string1.substring(1);
     System.out.println(method2 + " " + "that has had the first letter capitalized using methods.");
-    System.out.println(Integer.toString(11)+ 5);
-    
-    
-    
+    System.out.println(Integer.toString(11) + 5);
+    // above is an example of casting, if I did not convert the integer 11 to a string, the result
+    // would have come out to 16, but since it is a string, it cannot be added with the integer 5.
+    String string2 =
+        "Here's \b an example of a \"string\" that has been \\ formatted using \t escape \'sequences\'.";
+    // Sorry this is so disgusting to read
+    System.out.println(string2);
+
   }
 
 }
