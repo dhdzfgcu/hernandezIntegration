@@ -47,9 +47,9 @@ public class Main {
     System.out.println("Here's the length of the string string1:" + " " + method1);
     String method2 = string1.substring(0, 1).toUpperCase() + string1.substring(1);
     System.out.println(method2 + " " + "that has had the first letter capitalized using methods.");
-    int int2 = 5;
-    int int3 = 6;
-    String
+    System.out.println(Integer.toString(11)+ 5);
+    
+    
     
   }
 
