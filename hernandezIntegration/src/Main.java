@@ -2,7 +2,17 @@
 // This program serves as an example of what I've learned in COP2006
 public class Main {
 
+  // this is a header
+  // public is an access modifier
+  // void is the return type
   public static void main(String[] args) {
+    
+    sample1 myCar = new sample1();
+    sample1 kit = new sample1();
+    sample1 mysteryMachine = new sample1();
+    
+    myCar.setColor("black");
+    System.out.println(myCar.getColor());
     System.out.println("Welcome to my Integration project!");
     /*
      * A byte is a data type that is composed of 8 bits signed two's complement integer. Min value
@@ -54,7 +64,7 @@ public class Main {
         "Here's \b an example of a \"string\" that has been \\ formatted using \t escape \'sequences\'.";
     // Sorry this is so disgusting to read
     System.out.println(string2);
-    //end
+    // end
   }
 
 }
