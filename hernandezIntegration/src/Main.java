@@ -59,15 +59,23 @@ public class Main {
         "Here's \b an example of a \"string\" that has been \\ formatted using \t escape \'sequences\'.";
     // Sorry this is so disgusting to read
     System.out.println(string2);
+    System.out.println("What's your favorite color?");
     Scanner colorChoice = new Scanner(System.in);
     String choice = colorChoice.nextLine();
-  public static String favColor(String decisionC) {
-    if (decisionC.toLowerCase() = "blue") {
-      System.out.println("Right Answer!");
-    } else {
-      System.out.println(">:(");
-    }
-  }
+    String finChoice = favColor(choice);
+    System.out.println(finChoice);
+    
   }
 
+
+public static String favColor(String decisionC) {
+  String response1 = "Right Answer!";
+  String response2 = ">:(";
+  if ((decisionC.toLowerCase()).equals("blue")) {
+    return response1;
+  } else {
+    return response2;
+  }
+
+}
 }
