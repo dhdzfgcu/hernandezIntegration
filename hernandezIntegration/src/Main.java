@@ -70,25 +70,7 @@ public class Main {
     
     String luckyDecision = decision.nextLine();
     if ((luckyDecision.toLowerCase()).equals("no")) {
-      System.out.println("    "
-          + "      _ _.-''''''--._\n" + 
-          "         .` `.  ...------.\\\n" + 
-          "        / |O :-`   _,.,---'\n" + 
-          "       '  \\   ;--''\n" + 
-          "       | _.' (\n" + 
-          "       ,' _,' `-.\n" + 
-          "       : /       '.\n" + 
-          "       \\ \\         '\n" + 
-          "        `.|         `.\n" + 
-          "          `-._        \\\n" + 
-          "              '.  ,-.  \\\n" + 
-          "  .__          _`.\\..`\\ \\\n" + 
-          "  ,  ''- . _,-'.,-'  ``: \\\n" + 
-          "  '-...._ (( (('-.._    \\ \\\n" + 
-          "         `--..      `'-. \\ \\\n" + 
-          "              `..     '   \\ \\\n" + 
-          "                 `\\ \\fsr   `\"\n" + 
-          "                   \\/");
+      System.out.println("if you say so....");
     } else {
       Random lucky = new Random();
       int number1;
