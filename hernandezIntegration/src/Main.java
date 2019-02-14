@@ -1,6 +1,7 @@
 // My name is Darian Hernandez and I'm gonna become the best hokage ever, believe it!
 // This program serves as an example of what I've learned in COP2006
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
@@ -60,18 +61,54 @@ public class Main {
     // Sorry this is so disgusting to read
     System.out.println(string2);
     System.out.println("What's your favorite color?");
-    Scanner colorChoice = new Scanner(System.in);
-    String choice = colorChoice.nextLine();
+    Scanner decision = new Scanner(System.in);
+    String choice = decision.nextLine();
     String finChoice = favColor(choice);
     System.out.println(finChoice);
+  
+    System.out.println("Would you like some lucky numbers for today ^_^?");
     
+    String luckyDecision = decision.nextLine();
+    if ((luckyDecision.toLowerCase()).equals("no")) {
+      System.out.println("    "
+          + "      _ _.-''''''--._\n" + 
+          "         .` `.  ...------.\\\n" + 
+          "        / |O :-`   _,.,---'\n" + 
+          "       '  \\   ;--''\n" + 
+          "       | _.' (\n" + 
+          "       ,' _,' `-.\n" + 
+          "       : /       '.\n" + 
+          "       \\ \\         '\n" + 
+          "        `.|         `.\n" + 
+          "          `-._        \\\n" + 
+          "              '.  ,-.  \\\n" + 
+          "  .__          _`.\\..`\\ \\\n" + 
+          "  ,  ''- . _,-'.,-'  ``: \\\n" + 
+          "  '-...._ (( (('-.._    \\ \\\n" + 
+          "         `--..      `'-. \\ \\\n" + 
+          "              `..     '   \\ \\\n" + 
+          "                 `\\ \\fsr   `\"\n" + 
+          "                   \\/");
+    } else {
+      Random lucky = new Random();
+      int number1;
+      for(int i = 1; i<=7;i++) {
+        number1=1+lucky.nextInt(100);
+        while (number1==4) {
+          number1=1+lucky.nextInt(100);
+        }
+        System.out.println(number1);
+      }
+    }
+    decision.close();
+   
   }
 
 
 public static String favColor(String decisionC) {
   String response1 = "Right Answer!";
   String response2 = ">:(";
-  if ((decisionC.toLowerCase()).equals("blue")) {
+  if ((decisionC.toLowerCase()).equals("blue")||(decisionC.toLowerCase()).equals("purple")) {
     return response1;
   } else {
     return response2;
