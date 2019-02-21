@@ -12,9 +12,9 @@ public class Main {
     Scanner decision = new Scanner(System.in);
     System.out.println("Welcome to my Integration project!");
     System.out.println("Would you like to:");
-    System.out.println("1: See some explanations");
-    System.out.println("2: Have some fun");
-    System.out.println("3: Use a calculator");
+    System.out.println("\t 1: See some explanations");
+    System.out.println("\t 2: Have some fun");
+    System.out.println("\t 3: Use a calculator");
     int menuChoice = decision.nextInt();
     switch (menuChoice) {
       case 1:
@@ -23,6 +23,11 @@ public class Main {
       case 2:
         fun(decision);
         break;
+      case 3:
+        mathTime(decision);
+        break;
+        default:
+          System.out.println("Invalid input, try again");
 
 
       /*
@@ -86,7 +91,7 @@ public class Main {
 
   public static void fun(Scanner decision) {
     System.out.println("What's your favorite color?");
-
+        decision.nextLine();
     String choice = decision.nextLine();
     String finChoice = favColor(choice);
     System.out.println(finChoice);
@@ -148,5 +153,42 @@ public class Main {
       return response2;
     }
 
+  }
+  public static void mathTime(Scanner decision) {
+    System.out.println("What basic operation would you like to perform?");
+    System.out.println("\t 1: Addition");
+    System.out.println("\t 2: Subtraction");
+    System.out.println("\t 3: Division");
+    System.out.println("\t 4: Rounded Division");
+    System.out.println("\t 5: Multiplication");
+    int calChoice = decision.nextInt();
+    switch (calChoice){
+      case 1:
+        addition(decision);
+        break;
+      case 2:
+        subtraction(sub);
+        break;
+      case 3:
+        division(div);
+        break;
+      case 4:
+        divisionR(divR);
+        break;
+      case 5:
+        mult(mult);
+        break;
+    }
+    
+  }
+  public static double addition(Scanner decision) {
+    additionClass additionM1 = new additionClass();
+    additionClass additionM2 = new additionClass();
+    System.out.println("Please enter the first number you would like to add");
+    additionM1.setAddNum1(decision.nextDouble());
+    additionM2.setAddNum2(decision.nextDouble());
+    System.out.println();
+    
+  
   }
 }
