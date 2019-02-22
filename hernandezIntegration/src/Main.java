@@ -159,7 +159,7 @@ public class Main {
     System.out.println("\t 1: Addition");
     System.out.println("\t 2: Subtraction");
     System.out.println("\t 3: Division");
-    System.out.println("\t 4: Rounded Division");
+    System.out.println("\t 4: The remainder of a quotient");
     System.out.println("\t 5: Multiplication");
     int calChoice = decision.nextInt();
     switch (calChoice){
@@ -167,27 +167,80 @@ public class Main {
         addition(decision);
         break;
       case 2:
-        subtraction(sub);
+        subtraction(decision);
         break;
+        
       case 3:
-        division(div);
+        division(decision);
         break;
+        
       case 4:
-        divisionR(divR);
+        remainder(decision);
         break;
+        
       case 5:
-        mult(mult);
+        multiplication(decision);
         break;
     }
     
   }
-  public static double addition(Scanner decision) {
-    additionClass additionM1 = new additionClass();
-    additionClass additionM2 = new additionClass();
+  public static void addition(Scanner decision) {
+    AdditionClass additionM1 = new AdditionClass();
+    AdditionClass additionM2 = new AdditionClass();
     System.out.println("Please enter the first number you would like to add");
     additionM1.setAddNum1(decision.nextDouble());
+    System.out.println("Please enter the second number you would like to add");
     additionM2.setAddNum2(decision.nextDouble());
-    System.out.println();
+    System.out.println("The result is " + AdditionClass.getAddition());
+    
+    
+  
+  }
+  public static void subtraction(Scanner decision) {
+    SubtractionClass subtractionM1 = new SubtractionClass();
+    SubtractionClass subtractionM2 = new SubtractionClass();
+    System.out.println("Please enter the first number you would like to subtract");
+    subtractionM1.setSubNum1(decision.nextDouble());
+    System.out.println("Please enter the second number you would like to subtract");
+    subtractionM2.setSubNum2(decision.nextDouble());
+    System.out.println("The result is " + SubtractionClass.getSubtraction());
+    
+    
+  
+  }
+  public static void division(Scanner decision) {
+    DivisionClass divisionM1 = new DivisionClass();
+    DivisionClass divisionM2 = new DivisionClass();
+    System.out.println("Please enter the number you would like to divide");
+    divisionM1.setDivNum1(decision.nextDouble());
+    System.out.println("Please enter the number you would like to divide by");
+    divisionM2.setDivNum2(decision.nextDouble());
+    System.out.println("The result is " + DivisionClass.getDivision());
+    
+    
+  
+  }
+  public static void remainder(Scanner decision) {
+    RemainderClass remainderM1 = new RemainderClass();
+    RemainderClass remainderM2 = new RemainderClass();
+    System.out.println("Please enter the number you would like to divide");
+    remainderM1.setRemNum1(decision.nextDouble());
+    System.out.println("Please enter the number you would like to divide by");
+    remainderM2.setRemNum2(decision.nextDouble());
+    System.out.println("The remainder is " + RemainderClass.getRemainder());
+    
+    
+  
+  }
+  public static void multiplication(Scanner decision) {
+    MultiplicationClass multiplicationM1 = new MultiplicationClass();
+    MultiplicationClass multiplicationM2 = new MultiplicationClass();
+    System.out.println("Please enter the first number you would like to multiply");
+    multiplicationM1.setMultNum1(decision.nextDouble());
+    System.out.println("Please enter the second number you would like to multiply");
+    multiplicationM2.setMultNum2(decision.nextDouble());
+    System.out.println("The result is " + MultiplicationClass.getMultiplication());
+    
     
   
   }
