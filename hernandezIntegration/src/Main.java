@@ -9,53 +9,60 @@ public class Main {
   // public is an access modifier
   // void is the return type
   public static void main(String[] args) {
-    Scanner decision = new Scanner(System.in);
-    System.out.println("Welcome to my Integration project!");
-    System.out.println("Would you like to:");
-    System.out.println("\t 1: See some explanations");
-    System.out.println("\t 2: Have some fun");
-    System.out.println("\t 3: Use a calculator");
-    int menuChoice = decision.nextInt();
-    switch (menuChoice) {
-      case 1:
-        example(decision);
-        break;
-      case 2:
-        fun(decision);
-        break;
-      case 3:
-        mathTime(decision);
-        break;
-      default:
-        System.out.println("Invalid input, try again");
+    int continueProgram = 1;
+    while (continueProgram == 1) {
+      Scanner decision = new Scanner(System.in);
+      System.out.println("Welcome to my Integration project!");
+      System.out.println("Would you like to:");
+      System.out.println("\t 1: See some explanations");
+      System.out.println("\t 2: Have some fun");
+      System.out.println("\t 3: Use a calculator");
+      int menuChoice = decision.nextInt();
+      switch (menuChoice) {
+        case 1:
+          example(decision);
+          break;
+        case 2:
+          fun(decision);
+          break;
+        case 3:
+          mathTime(decision);
+          break;
+        default:
+          System.out.println("Invalid input, try again");
 
 
-        /*
-         * A byte is a data type that is composed of 8 bits signed two's complement integer. Min
-         * value is -128 and a maximum of 127 (inclusive). Useful for saving memory in large arrays,
-         * also can be used in place of int. Short data type is 16 bit signed two's complement
-         * integer, min value of -32768, and a maximum of 32767 inclusive. Same guidelines with byte
-         * Int is a 32 bit same stuff above. min value of -2^31, max value of (2^31)-1.In java se 8
-         * and higher the int type can be used to rep an unsigned 32 bit integer, which has a min
-         * value of 0 and max value of (2^32)-1. Integer class is used to use int data type as an
-         * unsigned integer. Static methods ex: compareUnsigned, divideUnsigned, have been added to
-         * the integer class to support math stuff down da line Long data type is 64 bit, same stuff
-         * as above. Signed long has a min value of -2^63, max value of 2^63)-1. Java se 8 and
-         * later, long data type reps unsigned 64 bit long, min value 0, max value of 2^64)-1, Use
-         * the data type when you need a range of values wider than int's. Long class also contains
-         * methods like compareUnsigned, divideUnsigned. Float data type is a single precision 32
-         * bit IEEE 754 floating point. Very big range of values, use a float if you need to save
-         * large amounts of memory, should never be used for precise values ex currency. For that
-         * use java.math.BigDecimal class. Double data type is a double precision 64 bit IEEE 754
-         * floating point. Range of values is very big, decimal values, this data type is used.
-         * Never used for currency/precise values. Boolean data type has only two values: true or
-         * false. Used for simple flags that track t/f, only reps one bit of info, no real size Char
-         * data type is single 16 bit unicode character. Min val of '\u0000' or just 0 and a max
-         * value of '\uffff' (or 65535 inclusive) Default values: Byte:0 Short:0 Int:0 Long:0L
-         * Float:0.0f Double:0.0d Char:'\u0000' String (any object):null Boolean:false
-         */
+          /*
+           * A byte is a data type that is composed of 8 bits signed two's complement integer. Min
+           * value is -128 and a maximum of 127 (inclusive). Useful for saving memory in large
+           * arrays, also can be used in place of int. Short data type is 16 bit signed two's
+           * complement integer, min value of -32768, and a maximum of 32767 inclusive. Same
+           * guidelines with byte Int is a 32 bit same stuff above. min value of -2^31, max value of
+           * (2^31)-1.In java se 8 and higher the int type can be used to rep an unsigned 32 bit
+           * integer, which has a min value of 0 and max value of (2^32)-1. Integer class is used to
+           * use int data type as an unsigned integer. Static methods ex: compareUnsigned,
+           * divideUnsigned, have been added to the integer class to support math stuff down da line
+           * Long data type is 64 bit, same stuff as above. Signed long has a min value of -2^63,
+           * max value of 2^63)-1. Java se 8 and later, long data type reps unsigned 64 bit long,
+           * min value 0, max value of 2^64)-1, Use the data type when you need a range of values
+           * wider than int's. Long class also contains methods like compareUnsigned,
+           * divideUnsigned. Float data type is a single precision 32 bit IEEE 754 floating point.
+           * Very big range of values, use a float if you need to save large amounts of memory,
+           * should never be used for precise values ex currency. For that use java.math.BigDecimal
+           * class. Double data type is a double precision 64 bit IEEE 754 floating point. Range of
+           * values is very big, decimal values, this data type is used. Never used for
+           * currency/precise values. Boolean data type has only two values: true or false. Used for
+           * simple flags that track t/f, only reps one bit of info, no real size Char data type is
+           * single 16 bit unicode character. Min val of '\u0000' or just 0 and a max value of
+           * '\uffff' (or 65535 inclusive) Default values: Byte:0 Short:0 Int:0 Long:0L Float:0.0f
+           * Double:0.0d Char:'\u0000' String (any object):null Boolean:false
+           */
+          System.out.println("Press 1 to continue or 2 to quit.");
+          continueProgram = decision.nextInt();
+      }
     }
   }
+
 
   public static void example(Scanner decision) {
     boolean boolean1 = true;
@@ -81,8 +88,8 @@ public class Main {
     System.out.println(Integer.toString(11) + 5);
     // above is an example of casting, if I did not convert the integer 11 to a string, the result
     // would have come out to 16, but since it is a string, it cannot be added with the integer 5.
-    String string2 =
-        "Here's \b an example of a \"string\" that has been \\ formatted using \t escape \'sequences\'.";
+    String string2 = "Here's \b an example of a \"string\" that has been \\ formatted using \t "
+        + "escape \'sequences\'.";
     // Sorry this is so disgusting to read
     System.out.println(string2);
     for (int i = 5; i > 0; i--) {
@@ -94,6 +101,15 @@ public class Main {
     String compare1 = "This string will be compared to";
     String compare2 = "This string.";
     System.out.println(compare2.compareTo(compare1));
+    System.out.println("What number would you like to break at (0-10) in the coming loop?");
+    int skipN = decision.nextInt();
+    for (int i = 10; i > 0; i--) {
+      if (i == skipN) {
+        break;
+        //break is used to stop a loop in code
+      }
+      System.out.println(i);
+    }
   }
 
 
@@ -116,39 +132,39 @@ public class Main {
       for (int i = 1; i <= 7; i++) {
         number1 = 1 + lucky.nextInt(100);
         while (number1 == 4) {
-          number1 = 1 + lucky.nextInt(100);
+          continue;
+          // 4 is an unlucky number, so I used continue to skip it every time it was randomly
+          // generated.
         }
         System.out.println(number1);
       }
     } else {
       System.out.println("Invalid, try again");
     }
-
-    System.out.println("Welcome to mcdonalds please enter your order number 1-5");
-    int orderNumber = decision.nextInt();
-    switch (orderNumber) {
-      case 1:
-        System.out.println("chincken nungent");
-        break;
-      case 2:
-        System.out.println("hamborger");
-        break;
-      case 3:
-        System.out.println("chebruger");
-        break;
-      case 4:
-        System.out.println("h");
-        break;
-      case 5:
-        System.out.println("sheer heart attack");
-        break;
-      case 69:
-        System.out.println("haha nice");
-        break;
-      default:
-        System.out.println("I don't work at mcdonalds");
-    }
-
+    System.out.println("How many times do you want to see a cow?");
+    int cowInt = decision.nextInt();
+    do {
+      System.out.println("                        /;    ;\\\n"
+          + "                                   __  \\\\____//\n"
+          + "                                  /{_\\_/   `'\\____\n"
+          + "                                  \\___   (o)  (o  }\n"
+          + "       _____________________________/          :--'  \n"
+          + "   ,-,'`@@@@@@@@       @@@@@@         \\_    `__\\\n"
+          + "  ;:(  @@@@@@@@@        @@@             \\___(o'o)\n"
+          + "  :: )  @@@@          @@@@@@        ,'@@(  `===='       \n"
+          + "  :: : @@@@@:          @@@@         `@@@:\n"
+          + "  :: \\  @@@@@:       @@@@@@@)    (  '@@@'\n"
+          + "  ;; /\\      /`,    @@@@@@@@@\\   :@@@@@)\n"
+          + "  ::/  )    {_----------------:  :~`,~~;\n"
+          + " ;;'`; :   )                  :  / `; ;\n"
+          + ";;;; : :   ;                  :  ;  ; :              \n"
+          + "`'`' / :  :                   :  :  : :\n"
+          + "    )_ \\__;      \";\"          :_ ;  \\_\\       `,','\n"
+          + "    :__\\  \\    * `,'*         \\  \\  :  \\   *  8`;'*  *\n"
+          + "        `^'     \\ :/           `^'  `-^-'   \\v/ :  \\/ ");
+      // shoutout to Bill Ames on asciiart.eu!!
+      cowInt--;
+    } while (cowInt > 0);
   }
 
 
@@ -199,6 +215,7 @@ public class Main {
 
   public static void addition(Scanner decision) {
     AdditionClass additionM1 = new AdditionClass();
+    //This is an example of a method call and argument
     AdditionClass additionM2 = new AdditionClass();
     System.out.println("Please enter the first number you would like to add");
     additionM1.setAddNum1(decision.nextDouble());
@@ -261,4 +278,7 @@ public class Main {
 
 
   }
+
+
 }
+
