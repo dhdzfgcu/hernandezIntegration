@@ -4,7 +4,7 @@ public class SubtractionClass {
 
   private static double subNum1;
   private static double subNum2;
-
+//These ^ are an example of arguments
   public void setSubNum1(double subNum1) {
     SubtractionClass.subNum1 = subNum1;
   }

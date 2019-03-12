@@ -30,7 +30,37 @@ public class Main {
           break;
         default:
           System.out.println("Invalid input, try again");
-
+          /*
+           * Operator precedence:
+           * 
+           * Postfix (ex: expr++)
+           * 
+           * Unary (ex: ++expr)
+           * 
+           * Multiplicative: * / %
+           * 
+           * Additive: + -
+           * 
+           * Shift: <<, etc
+           * 
+           * Relational: <, etc
+           * 
+           * Equality: == etc
+           * 
+           * Bitwise and: &
+           * 
+           * Bitwise exclusive or: ^
+           * 
+           * Bitwise inclusive or: |
+           * 
+           * Logical and: &&
+           * 
+           * Logical or: ||
+           * 
+           * Ternary: ?:
+           * 
+           * Assignment: = etc
+           */
 
           /*
            * A byte is a data type that is composed of 8 bits signed two's complement integer. Min
@@ -106,7 +136,7 @@ public class Main {
     for (int i = 10; i > 0; i--) {
       if (i == skipN) {
         break;
-        //break is used to stop a loop in code
+        // break is used to stop a loop in code
       }
       System.out.println(i);
     }
@@ -132,6 +162,7 @@ public class Main {
       for (int i = 1; i <= 7; i++) {
         number1 = 1 + lucky.nextInt(100);
         while (number1 == 4) {
+          // == returns a boolean value (true or false) when used with objects
           continue;
           // 4 is an unlucky number, so I used continue to skip it every time it was randomly
           // generated.
@@ -214,7 +245,13 @@ public class Main {
   }
 
   public static void addition(Scanner decision) {
+    // The entirety of the ^ line above is the header
+    // "decision" is the parameter
     AdditionClass additionM1 = new AdditionClass();
+<<<<<<< HEAD
+=======
+    // This is an example of a method call
+>>>>>>> ce084d5ca8f3bb30945383f26746a545f8fab014
     AdditionClass additionM2 = new AdditionClass();
     System.out.println("Please enter the first number you would like to add");
     additionM1.setAddNum1(decision.nextDouble());
