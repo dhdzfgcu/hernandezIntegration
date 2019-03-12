@@ -20,13 +20,13 @@ public class Main {
       int menuChoice = decision.nextInt();
       switch (menuChoice) {
         case 1:
-          example(decision);
+          Example(decision);
           break;
         case 2:
-          fun(decision);
+          Fun(decision);
           break;
         case 3:
-          mathTime(decision);
+          MathTime(decision);
           break;
         default:
           System.out.println("Invalid input, try again");
@@ -64,7 +64,7 @@ public class Main {
   }
 
 
-  public static void example(Scanner decision) {
+  public static void Example(Scanner decision) {
     boolean boolean1 = true;
     System.out.println("Here's an example of a boolean:" + " " + boolean1);
     int int1 = 105;
@@ -114,7 +114,7 @@ public class Main {
 
 
 
-  public static void fun(Scanner decision) {
+  public static void Fun(Scanner decision) {
     System.out.println("What's your favorite color?");
     decision.nextLine();
     String choice = decision.nextLine();
@@ -180,7 +180,7 @@ public class Main {
 
   }
 
-  public static void mathTime(Scanner decision) {
+  public static void MathTime(Scanner decision) {
     System.out.println("What basic operation would you like to perform?");
     System.out.println("\t 1: Addition");
     System.out.println("\t 2: Subtraction");
@@ -215,12 +215,14 @@ public class Main {
 
   public static void addition(Scanner decision) {
     AdditionClass additionM1 = new AdditionClass();
-    //This is an example of a method call and argument
     AdditionClass additionM2 = new AdditionClass();
     System.out.println("Please enter the first number you would like to add");
     additionM1.setAddNum1(decision.nextDouble());
+    //^This is an example of a method call
     System.out.println("Please enter the second number you would like to add");
     additionM2.setAddNum2(decision.nextDouble());
+    //                               ^This is kind of an example of an argument, since it's user
+    //                                input, but it matches the data type in the method.
     System.out.println("The result is " + AdditionClass.getAddition());
 
 
