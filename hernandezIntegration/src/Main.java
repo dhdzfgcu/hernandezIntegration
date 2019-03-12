@@ -248,10 +248,6 @@ public class Main {
     // The entirety of the ^ line above is the header
     // "decision" is the parameter
     AdditionClass additionM1 = new AdditionClass();
-<<<<<<< HEAD
-=======
-    // This is an example of a method call
->>>>>>> ce084d5ca8f3bb30945383f26746a545f8fab014
     AdditionClass additionM2 = new AdditionClass();
     System.out.println("Please enter the first number you would like to add");
     additionM1.setAddNum1(decision.nextDouble());
