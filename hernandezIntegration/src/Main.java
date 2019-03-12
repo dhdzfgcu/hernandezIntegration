@@ -4,7 +4,6 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Main {
-
   // this is a header
   // public is an access modifier
   // void is the return type
@@ -31,37 +30,11 @@ public class Main {
         default:
           System.out.println("Invalid input, try again");
           /*
-           * Operator precedence:
-           * 
-           * Postfix (ex: expr++)
-           * 
-           * Unary (ex: ++expr)
-           * 
-           * Multiplicative: * / %
-           * 
-           * Additive: + -
-           * 
-           * Shift: <<, etc
-           * 
-           * Relational: <, etc
-           * 
-           * Equality: == etc
-           * 
-           * Bitwise and: &
-           * 
-           * Bitwise exclusive or: ^
-           * 
-           * Bitwise inclusive or: |
-           * 
-           * Logical and: &&
-           * 
-           * Logical or: ||
-           * 
-           * Ternary: ?:
-           * 
+           * Operator precedence: Postfix (ex: expr++) Unary (ex: ++expr) Multiplicative: * / %
+           * Additive: + - Shift: <<, etc Relational: <, etc Equality: == etc Bitwise and: & Bitwise
+           * exclusive or: ^ Bitwise inclusive or: | Logical and: && Logical or: || Ternary: ?:
            * Assignment: = etc
            */
-
           /*
            * A byte is a data type that is composed of 8 bits signed two's complement integer. Min
            * value is -128 and a maximum of 127 (inclusive). Useful for saving memory in large
@@ -92,7 +65,6 @@ public class Main {
       }
     }
   }
-
 
   public static void Example(Scanner decision) {
     boolean boolean1 = true;
@@ -142,17 +114,13 @@ public class Main {
     }
   }
 
-
-
   public static void Fun(Scanner decision) {
     System.out.println("What's your favorite color?");
     decision.nextLine();
     String choice = decision.nextLine();
     String finChoice = favColor(choice);
     System.out.println(finChoice);
-
     System.out.println("Would you like some lucky numbers for today ^_^?");
-
     String luckyDecision = decision.nextLine();
     if ((luckyDecision.toLowerCase()).equals("no")) {
       System.out.println("If you say so....");
@@ -198,8 +166,6 @@ public class Main {
     } while (cowInt > 0);
   }
 
-
-
   public static String favColor(String decisionC) {
     String response1 = "Right Answer!";
     String response2 = ">:(";
@@ -208,7 +174,6 @@ public class Main {
     } else {
       return response2;
     }
-
   }
 
   public static void MathTime(Scanner decision) {
@@ -226,22 +191,18 @@ public class Main {
       case 2:
         subtraction(decision);
         break;
-
       case 3:
         division(decision);
         break;
-
       case 4:
         remainder(decision);
         break;
-
       case 5:
         multiplication(decision);
         break;
       default:
         System.out.println("Invalid input, rerun and try again.");
     }
-
   }
 
   public static void addition(Scanner decision) {
@@ -251,15 +212,12 @@ public class Main {
     AdditionClass additionM2 = new AdditionClass();
     System.out.println("Please enter the first number you would like to add");
     additionM1.setAddNum1(decision.nextDouble());
-    //^This is an example of a method call
+    // ^This is an example of a method call
     System.out.println("Please enter the second number you would like to add");
     additionM2.setAddNum2(decision.nextDouble());
-    //                               ^This is kind of an example of an argument, since it's user
-    //                                input, but it matches the data type in the method.
+    // ^This is kind of an example of an argument, since it's user
+    // input, but it matches the data type in the method.
     System.out.println("The result is " + AdditionClass.getAddition());
-
-
-
   }
 
   public static void subtraction(Scanner decision) {
@@ -270,9 +228,6 @@ public class Main {
     System.out.println("Please enter the second number you would like to subtract");
     subtractionM2.setSubNum2(decision.nextDouble());
     System.out.println("The result is " + SubtractionClass.getSubtraction());
-
-
-
   }
 
   public static void division(Scanner decision) {
@@ -283,9 +238,6 @@ public class Main {
     System.out.println("Please enter the number you would like to divide by");
     divisionM2.setDivNum2(decision.nextDouble());
     System.out.println("The result is " + DivisionClass.getDivision());
-
-
-
   }
 
   public static void remainder(Scanner decision) {
@@ -296,9 +248,6 @@ public class Main {
     System.out.println("Please enter the number you would like to divide by");
     remainderM2.setRemNum2(decision.nextDouble());
     System.out.println("The remainder is " + RemainderClass.getRemainder());
-
-
-
   }
 
   public static void multiplication(Scanner decision) {
@@ -309,11 +258,6 @@ public class Main {
     System.out.println("Please enter the second number you would like to multiply");
     multiplicationM2.setMultNum2(decision.nextDouble());
     System.out.println("The result is " + MultiplicationClass.getMultiplication());
-
-
-
   }
-
-
 }
 
