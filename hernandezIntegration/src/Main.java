@@ -10,22 +10,22 @@ public class Main {
   public static void main(String[] args) {
     int continueProgram = 1;
     while (continueProgram == 1) {
-      Scanner decision = new Scanner(System.in);
+      Scanner scanner = new Scanner(System.in);
       System.out.println("Welcome to my Integration project!");
       System.out.println("Would you like to:");
       System.out.println("\t 1: See some explanations");
       System.out.println("\t 2: Have some fun");
       System.out.println("\t 3: Use a calculator");
-      int menuChoice = decision.nextInt();
+      int menuChoice = scanner.nextInt();
       switch (menuChoice) {
         case 1:
-          Example(decision);
+          showExample(scanner);
           break;
         case 2:
-          Fun(decision);
+          haveFun(scanner);
           break;
         case 3:
-          MathTime(decision);
+          calculate(scanner);
           break;
         default:
           System.out.println("Invalid input, try again");
@@ -61,12 +61,12 @@ public class Main {
            * Double:0.0d Char:'\u0000' String (any object):null Boolean:false
            */
           System.out.println("Press 1 to continue or 2 to quit.");
-          continueProgram = decision.nextInt();
+          continueProgram = scanner.nextInt();
       }
     }
   }
 
-  public static void Example(Scanner decision) {
+  public static void showExample(Scanner decision) {
     boolean boolean1 = true;
     System.out.println("Here's an example of a boolean:" + " " + boolean1);
     int int1 = 105;
@@ -104,9 +104,9 @@ public class Main {
     String compare2 = "This string.";
     System.out.println(compare2.compareTo(compare1));
     System.out.println("What number would you like to break at (0-10) in the coming loop?");
-    int skipN = decision.nextInt();
+    int breakExample = decision.nextInt();
     for (int i = 10; i > 0; i--) {
-      if (i == skipN) {
+      if (i == breakExample) {
         break;
         // break is used to stop a loop in code
       }
@@ -114,28 +114,28 @@ public class Main {
     }
   }
 
-  public static void Fun(Scanner decision) {
+  public static void haveFun(Scanner decision) {
     System.out.println("What's your favorite color?");
     decision.nextLine();
-    String choice = decision.nextLine();
-    String finChoice = favColor(choice);
-    System.out.println(finChoice);
+    String colorChoice1 = decision.nextLine();
+    String colorChoice2 = favColor(colorChoice1);
+    System.out.println(colorChoice2);
     System.out.println("Would you like some lucky numbers for today ^_^?");
-    String luckyDecision = decision.nextLine();
-    if ((luckyDecision.toLowerCase()).equals("no")) {
+    String luckyNumberDecision = decision.nextLine();
+    if ((luckyNumberDecision.toLowerCase()).equals("no")) {
       System.out.println("If you say so....");
-    } else if ((luckyDecision.toLowerCase()).equals("yes")) {
-      Random lucky = new Random();
-      int number1;
+    } else if ((luckyNumberDecision.toLowerCase()).equals("yes")) {
+      Random luckyNumber = new Random();
+      int luckyResult;
       for (int i = 1; i <= 7; i++) {
-        number1 = 1 + lucky.nextInt(100);
-        while (number1 == 4) {
+        luckyResult = 1 + luckyNumber.nextInt(100);
+        while (luckyResult == 4) {
           // == returns a boolean value (true or false) when used with objects
           continue;
           // 4 is an unlucky number, so I used continue to skip it every time it was randomly
           // generated.
         }
-        System.out.println(number1);
+        System.out.println(luckyResult);
       }
     } else {
       System.out.println("Invalid, try again");
@@ -161,7 +161,7 @@ public class Main {
           + "    )_ \\__;      \";\"          :_ ;  \\_\\       `,','\n"
           + "    :__\\  \\    * `,'*         \\  \\  :  \\   *  8`;'*  *\n"
           + "        `^'     \\ :/           `^'  `-^-'   \\v/ :  \\/ ");
-      // shoutout to Bill Ames on asciiart.eu!!
+      // shout out to Bill Ames on asciiart.eu!!
       cowInt--;
     } while (cowInt > 0);
   }
@@ -176,7 +176,7 @@ public class Main {
     }
   }
 
-  public static void MathTime(Scanner decision) {
+  public static void calculate(Scanner decision) {
     System.out.println("What basic operation would you like to perform?");
     System.out.println("\t 1: Addition");
     System.out.println("\t 2: Subtraction");
@@ -186,26 +186,26 @@ public class Main {
     int calChoice = decision.nextInt();
     switch (calChoice) {
       case 1:
-        addition(decision);
+        returnAddition(decision);
         break;
       case 2:
-        subtraction(decision);
+        returnSubtraction(decision);
         break;
       case 3:
-        division(decision);
+        returnDivision(decision);
         break;
       case 4:
-        remainder(decision);
+        returnRemainder(decision);
         break;
       case 5:
-        multiplication(decision);
+        returnMultiplication(decision);
         break;
       default:
         System.out.println("Invalid input, rerun and try again.");
     }
   }
 
-  public static void addition(Scanner decision) {
+  public static void returnAddition(Scanner decision) {
     // The entirety of the ^ line above is the header
     // "decision" is the parameter
     AdditionClass additionM1 = new AdditionClass();
@@ -220,7 +220,7 @@ public class Main {
     System.out.println("The result is " + AdditionClass.getAddition());
   }
 
-  public static void subtraction(Scanner decision) {
+  public static void returnSubtraction(Scanner decision) {
     SubtractionClass subtractionM1 = new SubtractionClass();
     SubtractionClass subtractionM2 = new SubtractionClass();
     System.out.println("Please enter the first number you would like to subtract");
@@ -230,7 +230,7 @@ public class Main {
     System.out.println("The result is " + SubtractionClass.getSubtraction());
   }
 
-  public static void division(Scanner decision) {
+  public static void returnDivision(Scanner decision) {
     DivisionClass divisionM1 = new DivisionClass();
     DivisionClass divisionM2 = new DivisionClass();
     System.out.println("Please enter the number you would like to divide");
@@ -240,7 +240,7 @@ public class Main {
     System.out.println("The result is " + DivisionClass.getDivision());
   }
 
-  public static void remainder(Scanner decision) {
+  public static void returnRemainder(Scanner decision) {
     RemainderClass remainderM1 = new RemainderClass();
     RemainderClass remainderM2 = new RemainderClass();
     System.out.println("Please enter the number you would like to divide");
@@ -250,7 +250,7 @@ public class Main {
     System.out.println("The remainder is " + RemainderClass.getRemainder());
   }
 
-  public static void multiplication(Scanner decision) {
+  public static void returnMultiplication(Scanner decision) {
     MultiplicationClass multiplicationM1 = new MultiplicationClass();
     MultiplicationClass multiplicationM2 = new MultiplicationClass();
     System.out.println("Please enter the first number you would like to multiply");
@@ -260,4 +260,3 @@ public class Main {
     System.out.println("The result is " + MultiplicationClass.getMultiplication());
   }
 }
-
