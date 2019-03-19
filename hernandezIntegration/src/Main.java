@@ -16,6 +16,7 @@ public class Main {
       System.out.println("\t 1: See some explanations");
       System.out.println("\t 2: Have some fun");
       System.out.println("\t 3: Use a calculator");
+      System.out.println("\t 4: Find out how old you are");
       int menuChoice = scanner.nextInt();
       switch (menuChoice) {
         case 1:
@@ -28,7 +29,7 @@ public class Main {
           calculate(scanner);
           break;
         case 4:
-          setDate(scanner);
+          ageGet(scanner);
         default:
           System.out.println("Invalid input, try again");
           /*
@@ -207,12 +208,22 @@ public class Main {
     }
   }
 
-  public static void setDate(Scanner scanner) {
-    int d = scanner.nextInt();
-    int m = scanner.nextInt();
+  public static void ageGet(Scanner scanner) {
+    System.out.println("Please enter the current year");
     int y = scanner.nextInt();
-    DateSet newDate = new DateSet(d, m, y);
-    System.out.println("The date you have entered is " + DateSet.getDay() + "/" + DateSet.getMonth() + "/" + DateSet.getYear());
+    System.out.println("Please enter the current month");
+    int m = scanner.nextInt();
+    System.out.println("Please enter the current day");
+    int d = scanner.nextInt();
+    System.out.println("The date you have entered is " + AgeGet.getMonth() + "/" + AgeGet.getDay() + "/" + AgeGet.getYear());
+    System.out.println("Please enter the year you were born");
+    int by = scanner.nextInt();
+    System.out.println("Please enter the month you were born");
+    int bm = scanner.nextInt();
+    System.out.println("Please enter the day you were born");
+    int bd = scanner.nextInt();
+    AgeGet newDate = new AgeGet(d, m, y, bd, bm, by);
+    
     
   }
 
