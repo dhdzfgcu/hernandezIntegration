@@ -27,6 +27,8 @@ public class Main {
         case 3:
           calculate(scanner);
           break;
+        case 4:
+          setDate(scanner);
         default:
           System.out.println("Invalid input, try again");
           /*
@@ -203,6 +205,15 @@ public class Main {
       default:
         System.out.println("Invalid input, rerun and try again.");
     }
+  }
+
+  public static void setDate(Scanner scanner) {
+    int d = scanner.nextInt();
+    int m = scanner.nextInt();
+    int y = scanner.nextInt();
+    DateSet newDate = new DateSet(d, m, y);
+    System.out.println("The date you have entered is " + DateSet.getDay() + "/" + DateSet.getMonth() + "/" + DateSet.getYear());
+    
   }
 
   public static void returnAddition(Scanner decision) {
