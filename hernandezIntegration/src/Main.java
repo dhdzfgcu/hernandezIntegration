@@ -2,6 +2,7 @@
 // This program serves as an example of what I've learned in COP2006
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Date;
 
 public class Main {
   // this is a header
@@ -115,6 +116,7 @@ public class Main {
       }
       System.out.println(i);
     }
+    
   }
 
   public static void haveFun(Scanner decision) {
@@ -209,20 +211,16 @@ public class Main {
   }
 
   public static void ageGet(Scanner scanner) {
-    System.out.println("Please enter the current year");
-    int y = scanner.nextInt();
-    System.out.println("Please enter the current month");
-    int m = scanner.nextInt();
-    System.out.println("Please enter the current day");
-    int d = scanner.nextInt();
-    System.out.println("The date you have entered is " + AgeGet.getMonth() + "/" + AgeGet.getDay() + "/" + AgeGet.getYear());
+    Date date = new Date();
+    System.out.println("The current date is: " + date);
     System.out.println("Please enter the year you were born");
     int by = scanner.nextInt();
     System.out.println("Please enter the month you were born");
     int bm = scanner.nextInt();
     System.out.println("Please enter the day you were born");
     int bd = scanner.nextInt();
-    AgeGet newDate = new AgeGet(d, m, y, bd, bm, by);
+    AgeGet newDate = new AgeGet((-1),(-1),(-1),bd, bm, by);
+    System.out.println("You have entered your birthdate as: " + newDate);
     
     
   }
