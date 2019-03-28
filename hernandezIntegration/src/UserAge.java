@@ -1,14 +1,14 @@
 // Darian Hernandez
 // This class sets the date for the age return class
-public class AgeGet {
+public class UserAge {
   private static int day;
   private static int month;
   private static int year;
   private static int bDay;
   private static int bMonth;
   private static int bYear;
-
-  public AgeGet(int d, int m, int y, int bd, int bm, int by) {
+//use the date class java util tutorialspoint
+  public UserAge(int d, int m, int y, int bd, int bm, int by) {
     setDay(d);
     setMonth(m);
     setYear(y);

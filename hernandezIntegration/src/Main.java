@@ -215,15 +215,18 @@ public class Main {
     int m = scanner.nextInt();
     System.out.println("Please enter the current day");
     int d = scanner.nextInt();
-    System.out.println("The date you have entered is " + AgeGet.getMonth() + "/" + AgeGet.getDay() + "/" + AgeGet.getYear());
+    UserAge newDate1 = new UserAge(d, m, y, 0, 0, 0);
+    System.out.println("The date you have entered is " + UserAge.getMonth() + "/" + UserAge.getDay() + "/" + UserAge.getYear());
     System.out.println("Please enter the year you were born");
     int by = scanner.nextInt();
     System.out.println("Please enter the month you were born");
     int bm = scanner.nextInt();
     System.out.println("Please enter the day you were born");
     int bd = scanner.nextInt();
-    AgeGet newDate = new AgeGet(d, m, y, bd, bm, by);
-    
+    UserAge newDate2 = new UserAge(d, m, y, bd, bm, by);
+    System.out.println("You entered your birthday as " + UserAge.getBMonth() + "/" + UserAge.getBDay() + "/" + UserAge.getBYear());
+    int fy = (m >= bm)?(y-by):((y-by)-1);
+    //nevermind loalkj
     
   }
 
