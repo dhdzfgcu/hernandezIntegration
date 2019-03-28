@@ -2,6 +2,7 @@
 // This program serves as an example of what I've learned in COP2006
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Date;
 
 public class Main {
   // this is a header
@@ -115,6 +116,7 @@ public class Main {
       }
       System.out.println(i);
     }
+    
   }
 
   public static void haveFun(Scanner decision) {
@@ -209,6 +211,7 @@ public class Main {
   }
 
   public static void ageGet(Scanner scanner) {
+<<<<<<< HEAD
     System.out.println("Please enter the current year");
     int y = scanner.nextInt();
     System.out.println("Please enter the current month");
@@ -217,16 +220,26 @@ public class Main {
     int d = scanner.nextInt();
     UserAge newDate1 = new UserAge(d, m, y, 0, 0, 0);
     System.out.println("The date you have entered is " + UserAge.getMonth() + "/" + UserAge.getDay() + "/" + UserAge.getYear());
+=======
+    Date date = new Date();
+    System.out.println("The current date is: " + date);
+>>>>>>> branch 'master' of https://github.com/dhdzfgcu/hernandezIntegration.git
     System.out.println("Please enter the year you were born");
     int by = scanner.nextInt();
     System.out.println("Please enter the month you were born");
     int bm = scanner.nextInt();
     System.out.println("Please enter the day you were born");
     int bd = scanner.nextInt();
+<<<<<<< HEAD
     UserAge newDate2 = new UserAge(d, m, y, bd, bm, by);
     System.out.println("You entered your birthday as " + UserAge.getBMonth() + "/" + UserAge.getBDay() + "/" + UserAge.getBYear());
     int fy = (m >= bm)?(y-by):((y-by)-1);
     //nevermind loalkj
+=======
+    AgeGet newDate = new AgeGet((-1),(-1),(-1),bd, bm, by);
+    System.out.println("You have entered your birthdate as: " + newDate);
+    
+>>>>>>> branch 'master' of https://github.com/dhdzfgcu/hernandezIntegration.git
     
   }
 
