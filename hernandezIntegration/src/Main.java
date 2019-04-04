@@ -9,16 +9,23 @@ public class Main {
   // public is an access modifier
   // void is the return type
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
     int continueProgram = 1;
     while (continueProgram == 1) {
-      Scanner scanner = new Scanner(System.in);
+int menuChoice=0;
       System.out.println("Welcome to my Integration project!");
       System.out.println("Would you like to:");
       System.out.println("\t 1: See some explanations");
       System.out.println("\t 2: Have some fun");
       System.out.println("\t 3: Use a calculator");
       System.out.println("\t 4: Find out how old you are");
-      int menuChoice = scanner.nextInt();
+      try {
+        menuChoice = scanner.nextInt();
+      } catch (Exception e) {
+        System.out.println("Invalid input, try again");
+        scanner.nextLine();
+     
+      }
       switch (menuChoice) {
         case 1:
           showExample(scanner);
@@ -32,45 +39,52 @@ public class Main {
         case 4:
           ageGet(scanner);
         default:
-          System.out.println("Invalid input, try again");
-          /*
-           * Operator precedence: Postfix (ex: expr++) Unary (ex: ++expr) Multiplicative: * / %
-           * Additive: + - Shift: <<, etc Relational: <, etc Equality: == etc Bitwise and: & Bitwise
-           * exclusive or: ^ Bitwise inclusive or: | Logical and: && Logical or: || Ternary: ?:
-           * Assignment: = etc
-           */
-          /*
-           * A byte is a data type that is composed of 8 bits signed two's complement integer. Min
-           * value is -128 and a maximum of 127 (inclusive). Useful for saving memory in large
-           * arrays, also can be used in place of int. Short data type is 16 bit signed two's
-           * complement integer, min value of -32768, and a maximum of 32767 inclusive. Same
-           * guidelines with byte Int is a 32 bit same stuff above. min value of -2^31, max value of
-           * (2^31)-1.In java se 8 and higher the int type can be used to rep an unsigned 32 bit
-           * integer, which has a min value of 0 and max value of (2^32)-1. Integer class is used to
-           * use int data type as an unsigned integer. Static methods ex: compareUnsigned,
-           * divideUnsigned, have been added to the integer class to support math stuff down da line
-           * Long data type is 64 bit, same stuff as above. Signed long has a min value of -2^63,
-           * max value of 2^63)-1. Java se 8 and later, long data type reps unsigned 64 bit long,
-           * min value 0, max value of 2^64)-1, Use the data type when you need a range of values
-           * wider than int's. Long class also contains methods like compareUnsigned,
-           * divideUnsigned. Float data type is a single precision 32 bit IEEE 754 floating point.
-           * Very big range of values, use a float if you need to save large amounts of memory,
-           * should never be used for precise values ex currency. For that use java.math.BigDecimal
-           * class. Double data type is a double precision 64 bit IEEE 754 floating point. Range of
-           * values is very big, decimal values, this data type is used. Never used for
-           * currency/precise values. Boolean data type has only two values: true or false. Used for
-           * simple flags that track t/f, only reps one bit of info, no real size Char data type is
-           * single 16 bit unicode character. Min val of '\u0000' or just 0 and a max value of
-           * '\uffff' (or 65535 inclusive) Default values: Byte:0 Short:0 Int:0 Long:0L Float:0.0f
-           * Double:0.0d Char:'\u0000' String (any object):null Boolean:false
-           */
-          System.out.println("Press 1 to continue or 2 to quit.");
-          continueProgram = scanner.nextInt();
+          System.out.print("");
       }
+
+
+      /*
+       * Operator precedence: Postfix (ex: expr++) Unary (ex: ++expr) Multiplicative: * / %
+       * Additive: + - Shift: <<, etc Relational: <, etc Equality: == etc Bitwise and: & Bitwise
+       * exclusive or: ^ Bitwise inclusive or: | Logical and: && Logical or: || Ternary: ?:
+       * Assignment: = etc
+       */
+      /*
+       * A byte is a data type that is composed of 8 bits signed two's complement integer. Min value
+       * is -128 and a maximum of 127 (inclusive). Useful for saving memory in large arrays, also
+       * can be used in place of int. Short data type is 16 bit signed two's complement integer, min
+       * value of -32768, and a maximum of 32767 inclusive. Same guidelines with byte Int is a 32
+       * bit same stuff above. min value of -2^31, max value of (2^31)-1.In java se 8 and higher the
+       * int type can be used to rep an unsigned 32 bit integer, which has a min value of 0 and max
+       * value of (2^32)-1. Integer class is used to use int data type as an unsigned integer.
+       * Static methods ex: compareUnsigned, divideUnsigned, have been added to the integer class to
+       * support math stuff down da line Long data type is 64 bit, same stuff as above. Signed long
+       * has a min value of -2^63, max value of 2^63)-1. Java se 8 and later, long data type reps
+       * unsigned 64 bit long, min value 0, max value of 2^64)-1, Use the data type when you need a
+       * range of values wider than int's. Long class also contains methods like compareUnsigned,
+       * divideUnsigned. Float data type is a single precision 32 bit IEEE 754 floating point. Very
+       * big range of values, use a float if you need to save large amounts of memory, should never
+       * be used for precise values ex currency. For that use java.math.BigDecimal class. Double
+       * data type is a double precision 64 bit IEEE 754 floating point. Range of values is very
+       * big, decimal values, this data type is used. Never used for currency/precise values.
+       * Boolean data type has only two values: true or false. Used for simple flags that track t/f,
+       * only reps one bit of info, no real size Char data type is single 16 bit unicode character.
+       * Min val of '\u0000' or just 0 and a max value of '\uffff' (or 65535 inclusive) Default
+       * values: Byte:0 Short:0 Int:0 Long:0L Float:0.0f Double:0.0d Char:'\u0000' String (any
+       * object):null Boolean:false
+       */
+
     }
-  }
+
+  
+  System.out.println("Press 1 to continue or 2 to quit.");
+  continueProgram=scanner.nextInt();
+}
+
+
 
   public static void showExample(Scanner decision) {
+    System.out.println((3) % 5);
     boolean boolean1 = true;
     System.out.println("Here's an example of a boolean:" + " " + boolean1);
     int int1 = 105;
@@ -108,7 +122,12 @@ public class Main {
     String compare2 = "This string.";
     System.out.println(compare2.compareTo(compare1));
     System.out.println("What number would you like to break at (0-10) in the coming loop?");
-    int breakExample = decision.nextInt();
+    int breakExample = 0;
+    try {
+    breakExample = decision.nextInt();
+    } catch(Exception e) {
+      System.out.println("Invalid Input, try again");
+    }
     for (int i = 10; i > 0; i--) {
       if (i == breakExample) {
         break;
@@ -116,7 +135,16 @@ public class Main {
       }
       System.out.println(i);
     }
-    
+    System.out.println("Here's an example of a one dimensional array");
+    int array1[] = {3, 4, 5, 4, 6};
+    System.out.println(array1[2]);
+    int sum1 = 0;
+    // Heres the sum of the array using an accumulator
+    for (int i = 0; i < array1.length; i++) {
+      sum1 += array1[i];
+    }
+    System.out.println(sum1);
+    int array2[][] = {{3, 4}, {2, 5}};
   }
 
   public static void haveFun(Scanner decision) {
@@ -211,18 +239,38 @@ public class Main {
   }
 
   public static void ageGet(Scanner scanner) {
+
+    System.out.println("Please enter the current year");
+    int y = scanner.nextInt();
+    System.out.println("Please enter the current month");
+    int m = scanner.nextInt();
+    System.out.println("Please enter the current day");
+    int d = scanner.nextInt();
+    UserAge newDate1 = new UserAge(d, m, y, 0, 0, 0);
+    System.out.println("The date you have entered is " + UserAge.getMonth() + "/" + UserAge.getDay()
+        + "/" + UserAge.getYear());
+
     Date date = new Date();
     System.out.println("The current date is: " + date);
+
     System.out.println("Please enter the year you were born");
     int by = scanner.nextInt();
     System.out.println("Please enter the month you were born");
     int bm = scanner.nextInt();
     System.out.println("Please enter the day you were born");
     int bd = scanner.nextInt();
-    AgeGet newDate = new AgeGet((-1),(-1),(-1),bd, bm, by);
+
+    UserAge newDate2 = new UserAge(d, m, y, bd, bm, by);
+    System.out.println("You entered your birthday as " + UserAge.getBMonth() + "/"
+        + UserAge.getBDay() + "/" + UserAge.getBYear());
+    int fy = (m >= bm) ? (y - by) : ((y - by) - 1);
+    // nevermind loalkj
+
+    UserAge newDate = new UserAge((-1), (-1), (-1), bd, bm, by);
     System.out.println("You have entered your birthdate as: " + newDate);
-    
-    
+
+
+
   }
 
   public static void returnAddition(Scanner decision) {
@@ -251,13 +299,18 @@ public class Main {
   }
 
   public static void returnDivision(Scanner decision) {
-    DivisionClass divisionM1 = new DivisionClass();
-    DivisionClass divisionM2 = new DivisionClass();
+    DivisionClassNoErrors divisionM1 = new DivisionClassNoErrors();
+    DivisionClassNoErrors divisionM2 = new DivisionClassNoErrors();
     System.out.println("Please enter the number you would like to divide");
-    divisionM1.setDivNum1(decision.nextDouble());
+    divisionM1.setDivNum1(decision.nextFloat());
     System.out.println("Please enter the number you would like to divide by");
-    divisionM2.setDivNum2(decision.nextDouble());
-    System.out.println("The result is " + DivisionClass.getDivision());
+    divisionM2.setDivNum2(decision.nextFloat());
+    try {
+      System.out.println("The result is " + DivisionClassNoErrors.getDivision());
+    } catch (Exception e) {
+
+      System.out.println("Invalid Input, try again");
+    }
   }
 
   public static void returnRemainder(Scanner decision) {
@@ -280,3 +333,4 @@ public class Main {
     System.out.println("The result is " + MultiplicationClass.getMultiplication());
   }
 }
+
