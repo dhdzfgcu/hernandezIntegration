@@ -1,19 +1,27 @@
 // Darian Hernandez
 // This is a class that divides numbers for my unbelievably convoluted calculator
 public class DivisionClass {
-  private static double divNum1;
-  private static double divNum2;
+  private static float divNum1;
+  private static float divNum2;
 
-  public void setDivNum1(double divNum1) {
+  public void setDivNum1(float divNum1) {
     DivisionClass.divNum1 = divNum1;
   }
 
-  public void setDivNum2(double divNum2) {
+  public void setDivNum2(float divNum2) {
     DivisionClass.divNum2 = divNum2;
   }
 
-  public static double getDivision() {
-    double finalDiv = divNum1 / divNum2;
-    return finalDiv;
+
+
+  public static float getDivision() throws Exception {
+    if (divNum2 == 0) {
+      throw new Exception("Invalid Input, try again");
+
+    } else {  
+      return divNum1 / divNum2;
+    }
   }
 }
+
+

@@ -71,6 +71,7 @@ public class Main {
   }
 
   public static void showExample(Scanner decision) {
+    System.out.println((3) % 5);
     boolean boolean1 = true;
     System.out.println("Here's an example of a boolean:" + " " + boolean1);
     int int1 = 105;
@@ -116,7 +117,16 @@ public class Main {
       }
       System.out.println(i);
     }
-    
+    System.out.println("Here's an example of a one dimensional array");
+    int array1[] = {3, 4, 5, 4, 6};
+    System.out.println(array1[2]);
+    int sum1 = 0;
+    //Heres the sum of the array using an accumulator
+    for (int i = 0; i < array1.length; i++) {
+      sum1 += array1[i];
+    }
+    System.out.println(sum1);
+    int array2[][] = {{3,4},{2,5}};
   }
 
   public static void haveFun(Scanner decision) {
@@ -211,7 +221,7 @@ public class Main {
   }
 
   public static void ageGet(Scanner scanner) {
-<<<<<<< HEAD
+
     System.out.println("Please enter the current year");
     int y = scanner.nextInt();
     System.out.println("Please enter the current month");
@@ -219,28 +229,30 @@ public class Main {
     System.out.println("Please enter the current day");
     int d = scanner.nextInt();
     UserAge newDate1 = new UserAge(d, m, y, 0, 0, 0);
-    System.out.println("The date you have entered is " + UserAge.getMonth() + "/" + UserAge.getDay() + "/" + UserAge.getYear());
-=======
+    System.out.println("The date you have entered is " + UserAge.getMonth() + "/" + UserAge.getDay()
+        + "/" + UserAge.getYear());
+
     Date date = new Date();
     System.out.println("The current date is: " + date);
->>>>>>> branch 'master' of https://github.com/dhdzfgcu/hernandezIntegration.git
+
     System.out.println("Please enter the year you were born");
     int by = scanner.nextInt();
     System.out.println("Please enter the month you were born");
     int bm = scanner.nextInt();
     System.out.println("Please enter the day you were born");
     int bd = scanner.nextInt();
-<<<<<<< HEAD
+
     UserAge newDate2 = new UserAge(d, m, y, bd, bm, by);
-    System.out.println("You entered your birthday as " + UserAge.getBMonth() + "/" + UserAge.getBDay() + "/" + UserAge.getBYear());
-    int fy = (m >= bm)?(y-by):((y-by)-1);
-    //nevermind loalkj
-=======
-    AgeGet newDate = new AgeGet((-1),(-1),(-1),bd, bm, by);
+    System.out.println("You entered your birthday as " + UserAge.getBMonth() + "/"
+        + UserAge.getBDay() + "/" + UserAge.getBYear());
+    int fy = (m >= bm) ? (y - by) : ((y - by) - 1);
+    // nevermind loalkj
+
+    UserAge newDate = new UserAge((-1), (-1), (-1), bd, bm, by);
     System.out.println("You have entered your birthdate as: " + newDate);
-    
->>>>>>> branch 'master' of https://github.com/dhdzfgcu/hernandezIntegration.git
-    
+
+
+
   }
 
   public static void returnAddition(Scanner decision) {
@@ -269,13 +281,18 @@ public class Main {
   }
 
   public static void returnDivision(Scanner decision) {
-    DivisionClass divisionM1 = new DivisionClass();
-    DivisionClass divisionM2 = new DivisionClass();
+    DivisionClassNoErrors divisionM1 = new DivisionClassNoErrors();
+    DivisionClassNoErrors divisionM2 = new DivisionClassNoErrors();
     System.out.println("Please enter the number you would like to divide");
-    divisionM1.setDivNum1(decision.nextDouble());
+    divisionM1.setDivNum1(decision.nextFloat());
     System.out.println("Please enter the number you would like to divide by");
-    divisionM2.setDivNum2(decision.nextDouble());
-    System.out.println("The result is " + DivisionClass.getDivision());
+    divisionM2.setDivNum2(decision.nextFloat());
+    try {
+      System.out.println("The result is " + DivisionClassNoErrors.getDivision());
+    } catch (Exception e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
   public static void returnRemainder(Scanner decision) {

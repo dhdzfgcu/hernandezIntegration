@@ -7,7 +7,8 @@ public class UserAge {
   private static int bDay;
   private static int bMonth;
   private static int bYear;
-//use the date class java util tutorialspoint
+
+  // use the date class java util tutorialspoint
   public UserAge(int d, int m, int y, int bd, int bm, int by) {
     setDay(d);
     setMonth(m);
@@ -15,6 +16,9 @@ public class UserAge {
     setBDay(bd);
     setBMonth(bm);
     setBYear(by);
+  }
+  public UserAge() {
+    System.out.println("Time to begin");
   }
 
   public void setDay(int d) {
@@ -40,6 +44,7 @@ public class UserAge {
   public static int getYear() {
     return year;
   }
+
   public void setBDay(int bd) {
     bDay = ((bd > 0 && bd <= 31) ? bd : 0);
   }
@@ -51,6 +56,7 @@ public class UserAge {
   public void setBYear(int by) {
     bYear = ((by > 0 && by <= 2020) ? by : 0);
   }
+
   public static int getBDay() {
     return bDay;
   }
