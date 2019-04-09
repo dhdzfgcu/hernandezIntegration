@@ -136,15 +136,32 @@ int menuChoice=0;
       System.out.println(i);
     }
     System.out.println("Here's an example of a one dimensional array");
-    int array1[] = {3, 4, 5, 4, 6};
+    int array1[] = {3, 1, 5, 4, 110};
     System.out.println(array1[2]);
+    int arraySmall = array1[0];
+    for(int i = 1; i<array1.length;i++) {  
+      if(array1[i]<arraySmall) {
+        arraySmall = array1[i];
+      } else {
+        continue;
+      }
+    }
+    System.out.println(arraySmall);
+    decision.nextInt();
     int sum1 = 0;
-    // Heres the sum of the array using an accumulator
+    // Here's the sum of the array using an accumulator
     for (int i = 0; i < array1.length; i++) {
       sum1 += array1[i];
     }
     System.out.println(sum1);
+    //Here's a multidimensional array
     int array2[][] = {{3, 4}, {2, 5}};
+    System.out.println(array2[0][1]);
+    String[] SArray = {"hello", "hewwo", "hewww", "aaaaa"};
+    //Here's the enhanced for loop
+    for(String item: SArray) {
+      System.out.println(item);
+    }
   }
 
   public static void haveFun(Scanner decision) {
