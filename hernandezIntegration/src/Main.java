@@ -1,8 +1,9 @@
 // My name is Darian Hernandez and I'm gonna become the best hokage ever, believe it!
 // This program serves as an example of what I've learned in COP2006
-import java.util.Scanner;
-import java.util.Random;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
   // this is a header
@@ -12,7 +13,7 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     int continueProgram = 1;
     while (continueProgram == 1) {
-int menuChoice=0;
+      int menuChoice = 0;
       System.out.println("Welcome to my Integration project!");
       System.out.println("Would you like to:");
       System.out.println("\t 1: See some explanations");
@@ -24,7 +25,7 @@ int menuChoice=0;
       } catch (Exception e) {
         System.out.println("Invalid input, try again");
         scanner.nextLine();
-     
+
       }
       switch (menuChoice) {
         case 1:
@@ -76,10 +77,14 @@ int menuChoice=0;
 
     }
 
-  
-  System.out.println("Press 1 to continue or 2 to quit.");
-  continueProgram=scanner.nextInt();
-}
+
+    System.out.println("Press 1 to continue or 2 to quit.");
+    try {
+      continueProgram = scanner.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid Input, try again");
+    }
+  }
 
 
 
@@ -124,8 +129,8 @@ int menuChoice=0;
     System.out.println("What number would you like to break at (0-10) in the coming loop?");
     int breakExample = 0;
     try {
-    breakExample = decision.nextInt();
-    } catch(Exception e) {
+      breakExample = decision.nextInt();
+    } catch (Exception e) {
       System.out.println("Invalid Input, try again");
     }
     for (int i = 10; i > 0; i--) {
@@ -139,28 +144,40 @@ int menuChoice=0;
     int array1[] = {3, 1, 5, 4, 110};
     System.out.println(array1[2]);
     int arraySmall = array1[0];
-    for(int i = 1; i<array1.length;i++) {  
-      if(array1[i]<arraySmall) {
+    for (int i = 1; i < array1.length; i++) {
+      if (array1[i] < arraySmall) {
         arraySmall = array1[i];
       } else {
         continue;
       }
     }
     System.out.println(arraySmall);
-    decision.nextInt();
+
     int sum1 = 0;
     // Here's the sum of the array using an accumulator
     for (int i = 0; i < array1.length; i++) {
       sum1 += array1[i];
     }
     System.out.println(sum1);
-    //Here's a multidimensional array
+    // Here's a multidimensional array
     int array2[][] = {{3, 4}, {2, 5}};
     System.out.println(array2[0][1]);
     String[] SArray = {"hello", "hewwo", "hewww", "aaaaa"};
-    //Here's the enhanced for loop
-    for(String item: SArray) {
+    // Here's the enhanced for loop
+    for (String item : SArray) {
       System.out.println(item);
+    }
+    ArrayList<String> names = new ArrayList<String>();
+    System.out.println("How many names would you like to add?");
+    int nameCount = decision.nextInt();
+    for (int i = 0; i < nameCount; i++) {
+      System.out.println("What name would you like to add?");
+      String nameDecision = decision.next();
+      names.add(nameDecision);
+    }
+    System.out.println("The names you have added are: ");
+    for (int i = 0; i < names.size(); i++) {
+      System.out.println(names.get(i));
     }
   }
 
@@ -256,37 +273,19 @@ int menuChoice=0;
   }
 
   public static void ageGet(Scanner scanner) {
-
-    System.out.println("Please enter the current year");
-    int y = scanner.nextInt();
-    System.out.println("Please enter the current month");
-    int m = scanner.nextInt();
-    System.out.println("Please enter the current day");
-    int d = scanner.nextInt();
-    UserAge newDate1 = new UserAge(d, m, y, 0, 0, 0);
-    System.out.println("The date you have entered is " + UserAge.getMonth() + "/" + UserAge.getDay()
-        + "/" + UserAge.getYear());
-
     Date date = new Date();
     System.out.println("The current date is: " + date);
-
     System.out.println("Please enter the year you were born");
     int by = scanner.nextInt();
     System.out.println("Please enter the month you were born");
     int bm = scanner.nextInt();
     System.out.println("Please enter the day you were born");
     int bd = scanner.nextInt();
-
-    UserAge newDate2 = new UserAge(d, m, y, bd, bm, by);
-    System.out.println("You entered your birthday as " + UserAge.getBMonth() + "/"
-        + UserAge.getBDay() + "/" + UserAge.getBYear());
-    int fy = (m >= bm) ? (y - by) : ((y - by) - 1);
-    // nevermind loalkj
-
-    UserAge newDate = new UserAge((-1), (-1), (-1), bd, bm, by);
-    System.out.println("You have entered your birthdate as: " + newDate);
-
-
+    UserAgeNoErrors newDate2 = new UserAgeNoErrors(bd, bm, by);
+    UserAgeNoErrors message1 = new UserAgeNoErrors();
+    System.out.println("You entered your birthday as " + UserAgeNoErrors.getBMonth() + "/"
+        + UserAgeNoErrors.getBDay() + "/" + UserAgeNoErrors.getBYear());
+    System.out.println(message1);
 
   }
 
@@ -295,11 +294,15 @@ int menuChoice=0;
     // "decision" is the parameter
     AdditionClass additionM1 = new AdditionClass();
     AdditionClass additionM2 = new AdditionClass();
-    System.out.println("Please enter the first number you would like to add");
-    additionM1.setAddNum1(decision.nextDouble());
-    // ^This is an example of a method call
-    System.out.println("Please enter the second number you would like to add");
-    additionM2.setAddNum2(decision.nextDouble());
+    try {
+      System.out.println("Please enter the first number you would like to add");
+      additionM1.setAddNum1(decision.nextDouble());
+      // ^This is an example of a method call
+      System.out.println("Please enter the second number you would like to add");
+      additionM2.setAddNum2(decision.nextDouble());
+    } catch (Exception e) {
+      System.out.println("Invalid Input, try again");
+    }
     // ^This is kind of an example of an argument, since it's user
     // input, but it matches the data type in the method.
     System.out.println("The result is " + AdditionClass.getAddition());
@@ -308,20 +311,28 @@ int menuChoice=0;
   public static void returnSubtraction(Scanner decision) {
     SubtractionClass subtractionM1 = new SubtractionClass();
     SubtractionClass subtractionM2 = new SubtractionClass();
-    System.out.println("Please enter the first number you would like to subtract");
-    subtractionM1.setSubNum1(decision.nextDouble());
-    System.out.println("Please enter the second number you would like to subtract");
-    subtractionM2.setSubNum2(decision.nextDouble());
+    try {
+      System.out.println("Please enter the first number you would like to subtract");
+      subtractionM1.setSubNum1(decision.nextDouble());
+      System.out.println("Please enter the second number you would like to subtract");
+      subtractionM2.setSubNum2(decision.nextDouble());
+    } catch (Exception e) {
+      System.out.println("Invalid Input, try again");
+    }
     System.out.println("The result is " + SubtractionClass.getSubtraction());
   }
 
   public static void returnDivision(Scanner decision) {
     DivisionClassNoErrors divisionM1 = new DivisionClassNoErrors();
     DivisionClassNoErrors divisionM2 = new DivisionClassNoErrors();
-    System.out.println("Please enter the number you would like to divide");
-    divisionM1.setDivNum1(decision.nextFloat());
-    System.out.println("Please enter the number you would like to divide by");
-    divisionM2.setDivNum2(decision.nextFloat());
+    try {
+      System.out.println("Please enter the number you would like to divide");
+      divisionM1.setDivNum1(decision.nextFloat());
+      System.out.println("Please enter the number you would like to divide by");
+      divisionM2.setDivNum2(decision.nextFloat());
+    } catch (Exception e) {
+      System.out.println("Invalid Input, try again");
+    }
     try {
       System.out.println("The result is " + DivisionClassNoErrors.getDivision());
     } catch (Exception e) {
@@ -333,20 +344,28 @@ int menuChoice=0;
   public static void returnRemainder(Scanner decision) {
     RemainderClass remainderM1 = new RemainderClass();
     RemainderClass remainderM2 = new RemainderClass();
-    System.out.println("Please enter the number you would like to divide");
-    remainderM1.setRemNum1(decision.nextDouble());
-    System.out.println("Please enter the number you would like to divide by");
-    remainderM2.setRemNum2(decision.nextDouble());
+    try {
+      System.out.println("Please enter the number you would like to divide");
+      remainderM1.setRemNum1(decision.nextDouble());
+      System.out.println("Please enter the number you would like to divide by");
+      remainderM2.setRemNum2(decision.nextDouble());
+    } catch (Exception e) {
+      System.out.println("Invalid Input, try again");
+    }
     System.out.println("The remainder is " + RemainderClass.getRemainder());
   }
 
   public static void returnMultiplication(Scanner decision) {
     MultiplicationClass multiplicationM1 = new MultiplicationClass();
     MultiplicationClass multiplicationM2 = new MultiplicationClass();
-    System.out.println("Please enter the first number you would like to multiply");
-    multiplicationM1.setMultNum1(decision.nextDouble());
-    System.out.println("Please enter the second number you would like to multiply");
-    multiplicationM2.setMultNum2(decision.nextDouble());
+    try {
+      System.out.println("Please enter the first number you would like to multiply");
+      multiplicationM1.setMultNum1(decision.nextDouble());
+      System.out.println("Please enter the second number you would like to multiply");
+      multiplicationM2.setMultNum2(decision.nextDouble());
+    } catch (Exception e) {
+      System.out.println("Invalid Input, try again");
+    }
     System.out.println("The result is " + MultiplicationClass.getMultiplication());
   }
 }

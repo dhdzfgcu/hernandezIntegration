@@ -16,4 +16,8 @@ public class MultiplicationClass {
     double finalMult = multNum1 * multNum2;
     return finalMult;
   }
+  public static double getMultiplication(int multNum1) {
+    double finalMult = multNum1*multNum2;
+    return finalMult;
+  }
 }
