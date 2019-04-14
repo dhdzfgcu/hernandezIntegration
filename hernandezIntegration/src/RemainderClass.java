@@ -13,7 +13,13 @@ public class RemainderClass {
   }
 
   public static double getRemainder() {
-    double finalRem = remNum1 % remNum2;
+    double finalRem = 0;
+    try {
+      finalRem = remNum1 % remNum2;
+
+    } catch (Exception e) {
+      System.out.println("Invalid input, please try again");
+    }
     return finalRem;
   }
 }

@@ -4,6 +4,7 @@ public class MultiplicationClass {
   private static double multNum1;
   private static double multNum2;
 
+  // Here's the this keyword being used
   public void setMultNum1(double multNum1) {
     MultiplicationClass.multNum1 = multNum1;
   }
@@ -16,8 +17,6 @@ public class MultiplicationClass {
     double finalMult = multNum1 * multNum2;
     return finalMult;
   }
-  public static double getMultiplication(int multNum1) {
-    double finalMult = multNum1*multNum2;
-    return finalMult;
-  }
+
 }
+

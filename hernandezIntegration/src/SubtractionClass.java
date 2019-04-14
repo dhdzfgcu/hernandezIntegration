@@ -14,9 +14,6 @@ public class SubtractionClass {
   }
 
   public static double getSubtraction() {
-
-
-
     double finalSub = subNum1 - subNum2;
     return finalSub;
   }

@@ -1,9 +1,8 @@
-
+// Darian Hernandez
+// This class is the DivisionClass but with no errors
 public class DivisionClassNoErrors extends DivisionClass {
 
-  public DivisionClassNoErrors() {
-
-  }
+  public DivisionClassNoErrors() {}
 
   /*
    * Inheritance is a tool in programming that allows one class to inherit the fields and methods of
@@ -13,6 +12,7 @@ public class DivisionClassNoErrors extends DivisionClass {
    */
   {
     try {
+      // Here's an example of the super keyword
       super.getDivision();
 
     } catch (Exception e) {
