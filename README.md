@@ -1,6 +1,8 @@
 # hernandezIntegration
 PSI 3
 
+Trello link: https://trello.com/b/eKtQEXOr/psi-2006
+
 Make a class in a separate file with private fields, public getters and setters, a constructor with and without parameters (Classes: DivisionClass, UserAge )(Methods:setDivNum1, getDivision, UserAge with parameters, UserAge without parameters)
 
 Overload a method (Class: UserAge)(Method: returnMessage)
