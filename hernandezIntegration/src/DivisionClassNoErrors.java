@@ -16,7 +16,7 @@ public class DivisionClassNoErrors extends DivisionClass {
       super.getDivision();
 
     } catch (Exception e) {
-
+      System.out.println("Invalid input, try again");
     }
   }
 }

@@ -5,8 +5,6 @@ public class DivisionClass {
   private static float divNum1;
   private static float divNum2;
 
-
-
   // Example of Setters
   public static void setDivNum1(float divNum1) {
 
