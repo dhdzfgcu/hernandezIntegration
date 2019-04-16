@@ -74,16 +74,14 @@ public class Main {
        * values: Byte:0 Short:0 Int:0 Long:0L Float:0.0f Double:0.0d Char:'\u0000' String (any
        * object):null Boolean:false
        */
-
+      System.out.println("Press 1 to continue or 2 to quit.");
+      try {
+        continueProgram = scanner.nextInt();
+      } catch (Exception e) {
+        System.out.println("Invalid Input, try again");
+      }
     }
 
-
-    System.out.println("Press 1 to continue or 2 to quit.");
-    try {
-      scanner.nextInt();
-    } catch (Exception e) {
-      System.out.println("Invalid Input, try again");
-    }
   }
 
 
@@ -253,7 +251,7 @@ public class Main {
       int luckyResult;
       for (int i = 1; i <= 7; i++) {
         luckyResult = 1 + luckyNumber.nextInt(100);
-        while (luckyResult == 4) {
+        if (luckyResult == 4) {
           // == returns a boolean value (true or false) when used with objects
           continue;
           // 4 is an unlucky number, so I used continue to skip it every time it was randomly
