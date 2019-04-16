@@ -140,10 +140,12 @@ public class Main {
       }
       System.out.println(i);
     }
+    // Example of a one dimensional array
     System.out.println("Here's an example of a one dimensional array");
     int array1[] = {3, 1, 5, 4, 110};
     System.out.println(array1[2]);
     int arraySmall = array1[0];
+    // Smallest value in an array
     for (int i = 1; i < array1.length; i++) {
       if (array1[i] < arraySmall) {
         arraySmall = array1[i];
@@ -151,28 +153,73 @@ public class Main {
         continue;
       }
     }
-    System.out.println(arraySmall);
 
+    System.out.println(arraySmall);
+    System.out.println("Below are the values in array1");
+    for (int i = 0; i < array1.length; i++) {
+      System.out.print(array1[i] + " ");
+    }
+    System.out.println();
+    System.out.println("Which number's index location would you like to find in this array?");
+    int index1 = 0;
+    try {
+      index1 = decision.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
+    // Finding the index where a value was found
+    for (int i = 0; i < array1.length; i++) {
+      if (array1[i] == index1) {
+        System.out.println("The value of " + index1 + " is located at " + i);
+      }
+    }
     int sum1 = 0;
     // Here's the sum of the array using an accumulator
     for (int i = 0; i < array1.length; i++) {
       sum1 += array1[i];
     }
-    System.out.println(sum1);
-    // Here's a multidimensional array
+    System.out.println("The sum of the values in the array is " + sum1);
+    // Here's a multi-dimensional array
     int array2[][] = {{3, 4}, {2, 5}};
-    System.out.println(array2[0][1]);
+    System.out
+        .println("Here is the location of one value in a multi-dimensional array " + array2[0][1]);
+    System.out.println("Which number's index location would you like to find?");
+    int doubleArray1Index = 0;
+    try {
+      doubleArray1Index = decision.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
+    // returning the coordinates of a certain value in a two dimensional array.
+    for (int i = 0; i < array2.length; i++) {
+      for (int j = 0; j < array2.length; j++) {
+        if (array2[i][j] == doubleArray1Index) {
+          System.out.println("The value of " + doubleArray1Index + " is located at " + i + "," + j);
+        }
+      }
+    }
     String[] SArray = {"hello", "hewwo", "hewww", "aaaaa"};
     // Here's the enhanced for loop
     for (String item : SArray) {
       System.out.println(item);
     }
+    // Declaring and using an ArrayList
     ArrayList<String> names = new ArrayList<String>();
     System.out.println("How many names would you like to add?");
-    int nameCount = decision.nextInt();
+    int nameCount = 0;
+    try {
+      nameCount = decision.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
     for (int i = 0; i < nameCount; i++) {
       System.out.println("What name would you like to add?");
-      String nameDecision = decision.next();
+      String nameDecision = "";
+      try {
+        nameDecision = decision.next();
+      } catch (Exception e) {
+        System.out.println("Invalid input, try again");
+      }
       names.add(nameDecision);
     }
     System.out.println("The names you have added are: ");
@@ -184,11 +231,21 @@ public class Main {
   public static void haveFun(Scanner decision) {
     System.out.println("What's your favorite color?");
     decision.nextLine();
-    String colorChoice1 = decision.nextLine();
+    String colorChoice1 = "";
+    try {
+      colorChoice1 = decision.nextLine();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
     String colorChoice2 = favColor(colorChoice1);
     System.out.println(colorChoice2);
     System.out.println("Would you like some lucky numbers for today ^_^?");
-    String luckyNumberDecision = decision.nextLine();
+    String luckyNumberDecision = "";
+    try {
+      luckyNumberDecision = decision.nextLine();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
     if ((luckyNumberDecision.toLowerCase()).equals("no")) {
       System.out.println("If you say so....");
     } else if ((luckyNumberDecision.toLowerCase()).equals("yes")) {
@@ -208,7 +265,12 @@ public class Main {
       System.out.println("Invalid, try again");
     }
     System.out.println("How many times do you want to see a cow?");
-    int cowInt = decision.nextInt();
+    int cowInt = 0;
+    try {
+      cowInt = decision.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
     do {
       System.out.println("                        /;    ;\\\n"
           + "                                   __  \\\\____//\n"
@@ -250,7 +312,12 @@ public class Main {
     System.out.println("\t 3: Division");
     System.out.println("\t 4: The remainder of a quotient");
     System.out.println("\t 5: Multiplication");
-    int calChoice = decision.nextInt();
+    int calChoice = 0;
+    try {
+      calChoice = decision.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
     switch (calChoice) {
       case 1:
         returnAddition(decision);
@@ -276,18 +343,40 @@ public class Main {
     Date date = new Date();
     System.out.println("The current date is: " + date);
     System.out.println("Please enter the year you were born");
-    int by = scanner.nextInt();
+    int by = 0;
+    try {
+      by = scanner.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
     System.out.println("Please enter the month you were born");
-    int bm = scanner.nextInt();
+    int bm = 0;
+    try {
+      bm = scanner.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
     System.out.println("Please enter the day you were born");
-    int bd = scanner.nextInt();
+    int bd = 0;
+    try {
+      bd = scanner.nextInt();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
     UserAgeNoErrors newDate2 = new UserAgeNoErrors(bd, bm, by);
-    UserAgeNoErrors message1 = new UserAgeNoErrors();
+    scanner.nextLine();
+    String message1 = "";
+    try {
+      message1 = scanner.nextLine();
+    } catch (Exception e) {
+      System.out.println("Invalid input, try again");
+    }
+    UserAgeNoErrors messageNew = new UserAgeNoErrors(message1);
     System.out.println("You entered your birthday as " + UserAgeNoErrors.getBMonth() + "/"
         + UserAgeNoErrors.getBDay() + "/" + UserAgeNoErrors.getBYear());
     System.out.println(message1);
     System.out.println(newDate2);
-
+    System.out.println(messageNew);
   }
 
   public static void returnAddition(Scanner decision) {

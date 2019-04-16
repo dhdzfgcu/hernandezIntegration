@@ -1,28 +1,32 @@
 # hernandezIntegration
+PSI 3
 
-Add your name as a comment at top of every file
+Trello link: https://trello.com/b/eKtQEXOr/psi-2006
 
-Add a description of the program as a comment at top
+Make a class in a separate file with private fields, public getters and setters, a constructor with and without parameters (Classes: DivisionClass, UserAge )(Methods:setDivNum1, getDivision, UserAge with parameters, UserAge without parameters)
 
-Add a list and description of Java built-in data types within the user interface or in comments
+Overload a method (Class: UserAge)(Method: returnMessage)
 
-Add a greeting / introduction to the user
+Describe inheritance and its benefits (Class: DivisionClassNoErrors)
 
-Use a boolean variable with an appropriate name  (singular noun, lowerCamelCase)
+Develop code that makes use of polymorphism (Class: UserAgeNoErrors) (Method: birthdaySong)
 
-Use an int variable with an appropriate name (singular noun, lowerCamelCase)
+Use super and this to access objects and constructors (Classes: UserAgeNoErrors, UserAge) (Methods: UserAge, UserAgeNoErrors)
 
-Use an double variable with an appropriate name (singular noun, lowerCamelCase)
+Declare, instantiate, initialize and use a one-dimensional array (Class: Main) (Method: showExample line145 and on)
 
-Use a String object with an appropriate name (singular noun, lowerCamelCase)
+Manually find the smallest value in an array (Class: Main) (Method: showExample line 149 and on)
 
-Define (in English) the term "variable" as it relates to computer programming in a comment or the user interface
+Get a sum of the values in an array using an accumulator.(Class: Main) (Method: showExample line 178 and on)
 
-Define (in English) the term "scope" as it relates to computer programming in a comment or the user interface
+Search an array and identify the index where a value was found.(Class: Main) (Method: showExample line 171 and on)
 
-Use final with a variable and describe what it means in a comment
+Create and use the enhanced for loop. (Class: Main) (Method: showExample line 203 and on)
 
-Use casting and describe what it means in a comment
+Declare, instantiate, initialize and use multi-dimensional arrays. (Class: Main) (Method: showExample line 183 and on)
 
-Format strings using escape sequences
+Declare and use an ArrayList of a given type.(Class: Main) (Method: showExample line 207 and on)
 
+Search a two-dimensional array and identify the coordinates where a value was found. (Class: Main)(Method: showExample line 194 and on)
+
+Effectively utilize exception handling for user input of an int

@@ -1,18 +1,33 @@
 // Darian Hernandez
-// This class sets the date for the age return class
+// This class sets the returns the age of the User
 public class UserAge {
-
   private static int bDay;
   private static int bMonth;
   private static int bYear;
+  private String message1;
 
-  // use the date class java util tutorialspoint
+  // Example of a constructor with parameters
   public UserAge(int bd, int bm, int by) {
     setBDay(bd);
     setBMonth(bm);
     setBYear(by);
   }
 
+  public UserAge(String message1) {
+    // example of the this keyword
+    this.message1 = message1;
+  }
+
+  public void returnMessage() {
+    System.out.println(message1);
+  }
+
+  // overloaded method
+  public void returnMessage(int bYear) {
+    System.out.println(bYear + ", what a great year huh.");
+  }
+
+  // Example of a constructor without parameters
   public UserAge() {
     System.out.println("Thank You");
   }
