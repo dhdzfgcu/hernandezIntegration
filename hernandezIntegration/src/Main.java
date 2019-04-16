@@ -140,7 +140,7 @@ public class Main {
     }
     // Example of a one dimensional array
     System.out.println("Here's an example of a one dimensional array");
-    int array1[] = {3, 1, 5, 4, 110};
+    int[] array1 = {3, 1, 5, 4, 110};
     System.out.println(array1[2]);
     int arraySmall = array1[0];
     // Smallest value in an array
@@ -178,7 +178,7 @@ public class Main {
     }
     System.out.println("The sum of the values in the array is " + sum1);
     // Here's a multi-dimensional array
-    int array2[][] = {{3, 4}, {2, 5}};
+    int[][] array2 = {{3, 4}, {2, 5}};
     System.out
         .println("Here is the location of one value in a multi-dimensional array " + array2[0][1]);
     System.out.println("Which number's index location would you like to find?");
@@ -361,7 +361,7 @@ public class Main {
     } catch (Exception e) {
       System.out.println("Invalid input, try again");
     }
-    UserAgeNoErrors newDate2 = new UserAgeNoErrors(bd, bm, by);
+    final UserAgeNoErrors newDate2 = new UserAgeNoErrors(bd, bm, by);
     scanner.nextLine();
     String message1 = "";
     try {
