@@ -4,11 +4,11 @@ public class DivisionClass {
   private static float divNum1;
   private static float divNum2;
 
-  public void setDivNum1(float divNum1) {
+  public static void setDivNum1(float divNum1) {
     DivisionClass.divNum1 = divNum1;
   }
 
-  public void setDivNum2(float divNum2) {
+  public static void setDivNum2(float divNum2) {
     DivisionClass.divNum2 = divNum2;
   }
 
@@ -18,7 +18,7 @@ public class DivisionClass {
     if (divNum2 == 0) {
       throw new ArithmeticException("Invalid Input, try again");
 
-    } else {  
+    } else {
       return divNum1 / divNum2;
     }
   }

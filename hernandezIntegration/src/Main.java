@@ -80,7 +80,7 @@ public class Main {
 
     System.out.println("Press 1 to continue or 2 to quit.");
     try {
-      continueProgram = scanner.nextInt();
+      scanner.nextInt();
     } catch (Exception e) {
       System.out.println("Invalid Input, try again");
     }
@@ -286,20 +286,19 @@ public class Main {
     System.out.println("You entered your birthday as " + UserAgeNoErrors.getBMonth() + "/"
         + UserAgeNoErrors.getBDay() + "/" + UserAgeNoErrors.getBYear());
     System.out.println(message1);
+    System.out.println(newDate2);
 
   }
 
   public static void returnAddition(Scanner decision) {
     // The entirety of the ^ line above is the header
     // "decision" is the parameter
-    AdditionClass additionM1 = new AdditionClass();
-    AdditionClass additionM2 = new AdditionClass();
     try {
       System.out.println("Please enter the first number you would like to add");
-      additionM1.setAddNum1(decision.nextDouble());
+      AdditionClass.setAddNum1(decision.nextDouble());
       // ^This is an example of a method call
       System.out.println("Please enter the second number you would like to add");
-      additionM2.setAddNum2(decision.nextDouble());
+      AdditionClass.setAddNum2(decision.nextDouble());
     } catch (Exception e) {
       System.out.println("Invalid Input, try again");
     }
@@ -309,13 +308,12 @@ public class Main {
   }
 
   public static void returnSubtraction(Scanner decision) {
-    SubtractionClass subtractionM1 = new SubtractionClass();
-    SubtractionClass subtractionM2 = new SubtractionClass();
+
     try {
       System.out.println("Please enter the first number you would like to subtract");
-      subtractionM1.setSubNum1(decision.nextDouble());
+      SubtractionClass.setSubNum1(decision.nextDouble());
       System.out.println("Please enter the second number you would like to subtract");
-      subtractionM2.setSubNum2(decision.nextDouble());
+      SubtractionClass.setSubNum2(decision.nextDouble());
     } catch (Exception e) {
       System.out.println("Invalid Input, try again");
     }
@@ -323,13 +321,11 @@ public class Main {
   }
 
   public static void returnDivision(Scanner decision) {
-    DivisionClassNoErrors divisionM1 = new DivisionClassNoErrors();
-    DivisionClassNoErrors divisionM2 = new DivisionClassNoErrors();
     try {
       System.out.println("Please enter the number you would like to divide");
-      divisionM1.setDivNum1(decision.nextFloat());
+      DivisionClass.setDivNum1(decision.nextFloat());
       System.out.println("Please enter the number you would like to divide by");
-      divisionM2.setDivNum2(decision.nextFloat());
+      DivisionClass.setDivNum2(decision.nextFloat());
     } catch (Exception e) {
       System.out.println("Invalid Input, try again");
     }
@@ -342,13 +338,11 @@ public class Main {
   }
 
   public static void returnRemainder(Scanner decision) {
-    RemainderClass remainderM1 = new RemainderClass();
-    RemainderClass remainderM2 = new RemainderClass();
     try {
       System.out.println("Please enter the number you would like to divide");
-      remainderM1.setRemNum1(decision.nextDouble());
+      RemainderClass.setRemNum1(decision.nextDouble());
       System.out.println("Please enter the number you would like to divide by");
-      remainderM2.setRemNum2(decision.nextDouble());
+      RemainderClass.setRemNum2(decision.nextDouble());
     } catch (Exception e) {
       System.out.println("Invalid Input, try again");
     }
@@ -356,13 +350,12 @@ public class Main {
   }
 
   public static void returnMultiplication(Scanner decision) {
-    MultiplicationClass multiplicationM1 = new MultiplicationClass();
-    MultiplicationClass multiplicationM2 = new MultiplicationClass();
+
     try {
       System.out.println("Please enter the first number you would like to multiply");
-      multiplicationM1.setMultNum1(decision.nextDouble());
+      MultiplicationClass.setMultNum1(decision.nextDouble());
       System.out.println("Please enter the second number you would like to multiply");
-      multiplicationM2.setMultNum2(decision.nextDouble());
+      MultiplicationClass.setMultNum2(decision.nextDouble());
     } catch (Exception e) {
       System.out.println("Invalid Input, try again");
     }

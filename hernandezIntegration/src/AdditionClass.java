@@ -4,11 +4,11 @@ public class AdditionClass {
   private static double addNum1;
   private static double addNum2;
 
-  public void setAddNum1(double addNum1) {
+  public static void setAddNum1(double addNum1) {
     AdditionClass.addNum1 = addNum1;
   }
 
-  public void setAddNum2(double addNum2) {
+  public static void setAddNum2(double addNum2) {
     AdditionClass.addNum2 = addNum2;
   }
 

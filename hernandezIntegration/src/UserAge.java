@@ -22,15 +22,15 @@ public class UserAge {
   }
 
 
-  public void setBDay(int bd) {
+  public static void setBDay(int bd) {
     bDay = ((bd > 0 && bd <= 31) ? bd : 0);
   }
 
-  public void setBMonth(int bm) {
+  public static void setBMonth(int bm) {
     bMonth = ((bm > 0 && bm <= 12) ? bm : 0);
   }
 
-  public void setBYear(int by) {
+  public static void setBYear(int by) {
     bYear = ((by > 0 && by <= 2020) ? by : 0);
   }
 
