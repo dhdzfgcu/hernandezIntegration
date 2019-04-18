@@ -5,10 +5,21 @@ import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Integration project for the class COP 2006, Spring 2019.
+ * 
+ * @author dahernandez0094
+ *
+ */
 public class Main {
   // this is a header
   // public is an access modifier
   // void is the return type
+  /**
+   * Main method for the Main class.
+   * 
+   * @param args Driver class.
+   */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     int continueProgram = 1;
@@ -39,8 +50,10 @@ public class Main {
           break;
         case 4:
           ageGet(scanner);
+          break;
         default:
           System.out.print("");
+          break;
       }
 
 
@@ -86,6 +99,11 @@ public class Main {
 
 
 
+  /**
+   * Shows the user examples of various programming concepts.
+   * 
+   * @param decision takes User input.
+   */
   public static void showExample(Scanner decision) {
     System.out.println((3) % 5);
     boolean boolean1 = true;
@@ -140,7 +158,7 @@ public class Main {
     }
     // Example of a one dimensional array
     System.out.println("Here's an example of a one dimensional array");
-    int[] array1 = {3, 1, 5, 4, 110};
+    int[] array1 = { 3, 1, 5, 4, 110 };
     System.out.println(array1[2]);
     int arraySmall = array1[0];
     // Smallest value in an array
@@ -178,7 +196,7 @@ public class Main {
     }
     System.out.println("The sum of the values in the array is " + sum1);
     // Here's a multi-dimensional array
-    int[][] array2 = {{3, 4}, {2, 5}};
+    int[][] array2 = { { 3, 4 }, { 2, 5 } };
     System.out
         .println("Here is the location of one value in a multi-dimensional array " + array2[0][1]);
     System.out.println("Which number's index location would you like to find?");
@@ -196,9 +214,9 @@ public class Main {
         }
       }
     }
-    String[] SArray = {"hello", "hewwo", "hewww", "aaaaa"};
+    String[] stringArray = { "hello", "hewwo", "hewww", "aaaaa" };
     // Here's the enhanced for loop
-    for (String item : SArray) {
+    for (String item : stringArray) {
       System.out.println(item);
     }
     // Declaring and using an ArrayList
@@ -226,6 +244,11 @@ public class Main {
     }
   }
 
+  /**
+   * Provides the user with a few input activities.
+   * 
+   * @param decision takes User input.
+   */
   public static void haveFun(Scanner decision) {
     System.out.println("What's your favorite color?");
     decision.nextLine();
@@ -293,6 +316,12 @@ public class Main {
     } while (cowInt > 0);
   }
 
+  /**
+   * Gives the User a response based on their input regarding their favorite color.
+   * 
+   * @param decisionC takes User input.
+   * @return an answer regarding the User's favorite color.
+   */
   public static String favColor(String decisionC) {
     String response1 = "Right Answer!";
     String response2 = ">:(";
@@ -303,6 +332,11 @@ public class Main {
     }
   }
 
+  /**
+   * Directory for the calculator feature.
+   * 
+   * @param decision takes User input.
+   */
   public static void calculate(Scanner decision) {
     System.out.println("What basic operation would you like to perform?");
     System.out.println("\t 1: Addition");
@@ -337,6 +371,11 @@ public class Main {
     }
   }
 
+  /**
+   * Returns the User's age.
+   * 
+   * @param scanner takes User input.
+   */
   public static void ageGet(Scanner scanner) {
     Date date = new Date();
     System.out.println("The current date is: " + date);
@@ -377,6 +416,11 @@ public class Main {
     System.out.println(messageNew);
   }
 
+  /**
+   * Returns the sum of two numbers.
+   * 
+   * @param decision takes User input.
+   */
   public static void returnAddition(Scanner decision) {
     // The entirety of the ^ line above is the header
     // "decision" is the parameter
@@ -394,6 +438,11 @@ public class Main {
     System.out.println("The result is " + AdditionClass.getAddition());
   }
 
+  /**
+   * Returns the difference of two numbers.
+   * 
+   * @param decision takes User input.
+   */
   public static void returnSubtraction(Scanner decision) {
 
     try {
@@ -407,6 +456,11 @@ public class Main {
     System.out.println("The result is " + SubtractionClass.getSubtraction());
   }
 
+  /**
+   * Returns the quotient of two numbers.
+   * 
+   * @param decision takes User input.
+   */
   public static void returnDivision(Scanner decision) {
     try {
       System.out.println("Please enter the number you would like to divide");
@@ -424,6 +478,11 @@ public class Main {
     }
   }
 
+  /**
+   * Returns the remainder of two numbers.
+   * 
+   * @param decision takes User input.
+   */
   public static void returnRemainder(Scanner decision) {
     try {
       System.out.println("Please enter the number you would like to divide");
@@ -436,6 +495,11 @@ public class Main {
     System.out.println("The remainder is " + RemainderClass.getRemainder());
   }
 
+  /**
+   * Returns the product of two numbers.
+   * 
+   * @param decision takes User input.
+   */
   public static void returnMultiplication(Scanner decision) {
 
     try {

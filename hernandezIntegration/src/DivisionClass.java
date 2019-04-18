@@ -1,5 +1,11 @@
 // Darian Hernandez
 // This is a class that divides numbers for my unbelievably convoluted calculator
+/**
+ * This class returns quotients for two given numbers.
+ * 
+ * @author dahernandez0094
+ *
+ */
 public class DivisionClass {
   // Example of private fields
   private static float divNum1;
@@ -16,6 +22,11 @@ public class DivisionClass {
   }
 
   // Example of a Getter
+  /**
+   * Returns the quotient of the two numbers given.
+   * 
+   * @return the quotient of the two numbers given.
+   */
   public static float getDivision() {
     if (divNum2 == 0) {
       throw new ArithmeticException("Invalid Input, try again");

@@ -1,5 +1,12 @@
 // Darian Hernandez
 // This is a class that multiplies numbers for my unbelievably convoluted calculator
+
+/**
+ * This class returns the product of two values.
+ * 
+ * @author dahernandez0094
+ *
+ */
 public class MultiplicationClass {
   private static double multNum1;
   private static double multNum2;

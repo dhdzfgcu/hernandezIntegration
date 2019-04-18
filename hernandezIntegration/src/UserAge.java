@@ -1,5 +1,11 @@
 // Darian Hernandez
 // This class sets the returns the age of the User
+/**
+ * Returns the age of the user.
+ * 
+ * @author dahernandez0094
+ *
+ */
 public class UserAge {
   private static int bDay;
   private static int bMonth;
@@ -7,6 +13,13 @@ public class UserAge {
   private String message1;
 
   // Example of a constructor with parameters
+  /**
+   * Stores the birth date of the user.
+   * 
+   * @param bd Stores user birth day.
+   * @param bm user Stores birth month.
+   * @param by user Stores birth year.
+   */
   public UserAge(int bd, int bm, int by) {
     setBDay(bd);
     setBMonth(bm);
@@ -23,8 +36,8 @@ public class UserAge {
   }
 
   // overloaded method
-  public void returnMessage(int bYear) {
-    System.out.println(bYear + ", what a great year huh.");
+  public void returnMessage(int birthYear) {
+    System.out.println(birthYear + ", what a great year huh.");
   }
 
   // Example of a constructor without parameters

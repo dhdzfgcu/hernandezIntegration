@@ -1,5 +1,12 @@
 // Darian Hernandez
 // This class is the DivisionClass but with no errors
+
+/**
+ * This class is the subclass of the DivisionClass, but with no errors.
+ * 
+ * @author dahernandez0094
+ *
+ */
 public class DivisionClassNoErrors extends DivisionClass {
 
   public DivisionClassNoErrors() {}

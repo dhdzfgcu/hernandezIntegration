@@ -1,5 +1,12 @@
 // Darian Hernandez
 // This is a class that adds numbers for my unbelievably convoluted calculator
+
+/**
+ * This class returns the sum of two numbers.
+ * 
+ * @author dahernandez0094
+ *
+ */
 public class AdditionClass {
   private static double addNum1;
   private static double addNum2;

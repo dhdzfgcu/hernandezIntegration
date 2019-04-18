@@ -1,5 +1,12 @@
 // Darian Hernandez
 // This is a class that subtracts numbers for my unbelievably convoluted calculator
+
+/**
+ * This class returns the difference of two values.
+ * 
+ * @author dahernandez0094
+ *
+ */
 public class SubtractionClass {
   private static double subNum1;
   private static double subNum2;
