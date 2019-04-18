@@ -31,12 +31,16 @@ public class Main {
       System.out.println("\t 2: Have some fun");
       System.out.println("\t 3: Use a calculator");
       System.out.println("\t 4: Find out how old you are");
-      try {
-        menuChoice = scanner.nextInt();
-      } catch (Exception e) {
-        System.out.println("Invalid input, try again");
-        scanner.nextLine();
+      boolean done = false;
+      while (!done) {
+        try {
+          menuChoice = scanner.nextInt();
+          done = true;
+        } catch (Exception e) {
+          System.out.println("Invalid input, try again");
+          scanner.nextLine();
 
+        }
       }
       switch (menuChoice) {
         case 1:
@@ -88,10 +92,19 @@ public class Main {
        * object):null Boolean:false
        */
       System.out.println("Press 1 to continue or 2 to quit.");
-      try {
-        continueProgram = scanner.nextInt();
-      } catch (Exception e) {
-        System.out.println("Invalid Input, try again");
+      // INFINITE LOOP
+      done = false;
+      while (!done) {
+        System.out.println("Press 1 to continue or 2 to quit.");
+        try {
+
+          continueProgram = scanner.nextInt();
+          done = true;
+        } catch (Exception e) {
+          System.out.println("Invalid Input, try again");
+          done = true;
+        }
+
       }
     }
 
@@ -144,10 +157,14 @@ public class Main {
     System.out.println(compare2.compareTo(compare1));
     System.out.println("What number would you like to break at (0-10) in the coming loop?");
     int breakExample = 0;
-    try {
-      breakExample = decision.nextInt();
-    } catch (Exception e) {
-      System.out.println("Invalid Input, try again");
+    boolean done = false;
+    while (!done) {
+      try {
+        breakExample = decision.nextInt();
+        done = true;
+      } catch (Exception e) {
+        System.out.println("Invalid Input, try again");
+      }
     }
     for (int i = 10; i > 0; i--) {
       if (i == breakExample) {
@@ -228,6 +245,7 @@ public class Main {
     } catch (Exception e) {
       System.out.println("Invalid input, try again");
     }
+    decision.next();
     for (int i = 0; i < nameCount; i++) {
       System.out.println("What name would you like to add?");
       String nameDecision = "";
