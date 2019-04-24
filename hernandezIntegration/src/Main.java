@@ -31,13 +31,14 @@ public class Main {
       System.out.println("\t 2: Have some fun");
       System.out.println("\t 3: Use a calculator");
       System.out.println("\t 4: Find out how old you are");
+      System.out.println("Please enter the number of which option you would like to select.");
       boolean done = false;
       while (!done) {
         try {
           menuChoice = scanner.nextInt();
           done = true;
-        } catch (Exception e) {
-          System.out.println("Invalid input, try again");
+        } catch (Exception ex) {
+          System.out.println("Invalid input, only numbers are accepted, please try again.");
           scanner.nextLine();
 
         }
@@ -91,17 +92,15 @@ public class Main {
        * values: Byte:0 Short:0 Int:0 Long:0L Float:0.0f Double:0.0d Char:'\u0000' String (any
        * object):null Boolean:false
        */
-      System.out.println("Press 1 to continue or 2 to quit.");
-      // INFINITE LOOP
       done = false;
       while (!done) {
-        System.out.println("Press 1 to continue or 2 to quit.");
+        System.out.println("Press 1 to continue or 2 to quit, numbers only please.");
         try {
 
           continueProgram = scanner.nextInt();
           done = true;
-        } catch (Exception e) {
-          System.out.println("Invalid Input, try again");
+        } catch (Exception ex) {
+          System.out.println("Invalid Input, only numbers are accepted, please try again.");
           done = true;
         }
 
@@ -155,15 +154,17 @@ public class Main {
     String compare1 = "This string will be compared to";
     String compare2 = "This string.";
     System.out.println(compare2.compareTo(compare1));
-    System.out.println("What number would you like to break at (0-10) in the coming loop?");
+    System.out.println(
+        "Please enter a number that you would like to break at (numbers 0-10 are accepted ) "
+            + "in the coming loop.");
     int breakExample = 0;
     boolean done = false;
     while (!done) {
       try {
         breakExample = decision.nextInt();
         done = true;
-      } catch (Exception e) {
-        System.out.println("Invalid Input, try again");
+      } catch (Exception ex) {
+        System.out.println("Invalid Input, only numbers are accepted, try again");
       }
     }
     for (int i = 10; i > 0; i--) {
@@ -187,7 +188,7 @@ public class Main {
       }
     }
 
-    System.out.println(arraySmall);
+    System.out.println("The smallest value in the array is " + arraySmall);
     System.out.println("Below are the values in array1");
     for (int i = 0; i < array1.length; i++) {
       System.out.print(array1[i] + " ");
@@ -197,8 +198,8 @@ public class Main {
     int index1 = 0;
     try {
       index1 = decision.nextInt();
-    } catch (Exception e) {
-      System.out.println("Invalid input, try again");
+    } catch (Exception exx) {
+      System.out.println("Invalid input, only numbers are accepted, please try again");
     }
     // Finding the index where a value was found
     for (int i = 0; i < array1.length; i++) {
@@ -220,8 +221,8 @@ public class Main {
     int doubleArray1Index = 0;
     try {
       doubleArray1Index = decision.nextInt();
-    } catch (Exception e) {
-      System.out.println("Invalid input, try again");
+    } catch (Exception ex) {
+      System.out.println("Invalid input, only numbers are accepted, please try again");
     }
     // returning the coordinates of a certain value in a two dimensional array.
     for (int i = 0; i < array2.length; i++) {
@@ -238,12 +239,12 @@ public class Main {
     }
     // Declaring and using an ArrayList
     ArrayList<String> names = new ArrayList<String>();
-    System.out.println("How many names would you like to add?");
+    System.out.println("How many names would you like to add? Numbers only please.");
     int nameCount = 0;
     try {
       nameCount = decision.nextInt();
-    } catch (Exception e) {
-      System.out.println("Invalid input, try again");
+    } catch (Exception ex) {
+      System.out.println("Invalid input, numbers only, please try again.");
     }
     decision.next();
     for (int i = 0; i < nameCount; i++) {
@@ -251,8 +252,8 @@ public class Main {
       String nameDecision = "";
       try {
         nameDecision = decision.next();
-      } catch (Exception e) {
-        System.out.println("Invalid input, try again");
+      } catch (Exception ex) {
+        System.out.println("Invalid input, all characters are allowed, but try again.");
       }
       names.add(nameDecision);
     }
@@ -273,16 +274,16 @@ public class Main {
     String colorChoice1 = "";
     try {
       colorChoice1 = decision.nextLine();
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid input, try again");
     }
     String colorChoice2 = favColor(colorChoice1);
     System.out.println(colorChoice2);
-    System.out.println("Would you like some lucky numbers for today ^_^?");
+    System.out.println("Would you like some lucky numbers for today ^_^? Please enter Yes or No");
     String luckyNumberDecision = "";
     try {
       luckyNumberDecision = decision.nextLine();
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid input, try again");
     }
     if ((luckyNumberDecision.toLowerCase()).equals("no")) {
@@ -307,7 +308,7 @@ public class Main {
     int cowInt = 0;
     try {
       cowInt = decision.nextInt();
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid input, try again");
     }
     do {
@@ -365,7 +366,7 @@ public class Main {
     int calChoice = 0;
     try {
       calChoice = decision.nextInt();
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid input, try again");
     }
     switch (calChoice) {
@@ -401,21 +402,21 @@ public class Main {
     int by = 0;
     try {
       by = scanner.nextInt();
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid input, try again");
     }
     System.out.println("Please enter the month you were born");
     int bm = 0;
     try {
       bm = scanner.nextInt();
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid input, try again");
     }
     System.out.println("Please enter the day you were born");
     int bd = 0;
     try {
       bd = scanner.nextInt();
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid input, try again");
     }
     final UserAgeNoErrors newDate2 = new UserAgeNoErrors(bd, bm, by);
@@ -423,7 +424,7 @@ public class Main {
     String message1 = "";
     try {
       message1 = scanner.nextLine();
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid input, try again");
     }
     UserAgeNoErrors messageNew = new UserAgeNoErrors(message1);
@@ -448,7 +449,7 @@ public class Main {
       // ^This is an example of a method call
       System.out.println("Please enter the second number you would like to add");
       AdditionClass.setAddNum2(decision.nextDouble());
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid Input, try again");
     }
     // ^This is kind of an example of an argument, since it's user
@@ -468,7 +469,7 @@ public class Main {
       SubtractionClass.setSubNum1(decision.nextDouble());
       System.out.println("Please enter the second number you would like to subtract");
       SubtractionClass.setSubNum2(decision.nextDouble());
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid Input, try again");
     }
     System.out.println("The result is " + SubtractionClass.getSubtraction());
@@ -485,12 +486,12 @@ public class Main {
       DivisionClass.setDivNum1(decision.nextFloat());
       System.out.println("Please enter the number you would like to divide by");
       DivisionClass.setDivNum2(decision.nextFloat());
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid Input, try again");
     }
     try {
       System.out.println("The result is " + DivisionClassNoErrors.getDivision());
-    } catch (Exception e) {
+    } catch (Exception ex) {
 
       System.out.println("Invalid Input, try again");
     }
@@ -507,7 +508,7 @@ public class Main {
       RemainderClass.setRemNum1(decision.nextDouble());
       System.out.println("Please enter the number you would like to divide by");
       RemainderClass.setRemNum2(decision.nextDouble());
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid Input, try again");
     }
     System.out.println("The remainder is " + RemainderClass.getRemainder());
@@ -525,7 +526,7 @@ public class Main {
       MultiplicationClass.setMultNum1(decision.nextDouble());
       System.out.println("Please enter the second number you would like to multiply");
       MultiplicationClass.setMultNum2(decision.nextDouble());
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("Invalid Input, try again");
     }
     System.out.println("The result is " + MultiplicationClass.getMultiplication());
