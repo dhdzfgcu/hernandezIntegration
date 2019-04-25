@@ -155,7 +155,7 @@ public class Main {
     String compare2 = "This string.";
     System.out.println(compare2.compareTo(compare1));
     System.out.println(
-        "Please enter a number that you would like to break at (numbers 0-10 are accepted ) "
+        "Please enter a whole number that you would like to break at (numbers 0-10 are accepted ) "
             + "in the coming loop.");
     int breakExample = 0;
     boolean done = false;
@@ -199,7 +199,7 @@ public class Main {
     try {
       index1 = decision.nextInt();
     } catch (Exception exx) {
-      System.out.println("Invalid input, only numbers are accepted, please try again");
+      System.out.println("Invalid input, only whole numbers are accepted, please try again");
     }
     // Finding the index where a value was found
     for (int i = 0; i < array1.length; i++) {
@@ -222,7 +222,7 @@ public class Main {
     try {
       doubleArray1Index = decision.nextInt();
     } catch (Exception ex) {
-      System.out.println("Invalid input, only numbers are accepted, please try again");
+      System.out.println("Invalid input, only whole numbers are accepted, please try again");
     }
     // returning the coordinates of a certain value in a two dimensional array.
     for (int i = 0; i < array2.length; i++) {
@@ -239,12 +239,12 @@ public class Main {
     }
     // Declaring and using an ArrayList
     ArrayList<String> names = new ArrayList<String>();
-    System.out.println("How many names would you like to add? Numbers only please.");
+    System.out.println("How many names would you like to add? Whole numbers only please.");
     int nameCount = 0;
     try {
       nameCount = decision.nextInt();
     } catch (Exception ex) {
-      System.out.println("Invalid input, numbers only, please try again.");
+      System.out.println("Invalid input, whole numbers only, please try again.");
     }
     decision.next();
     for (int i = 0; i < nameCount; i++) {
@@ -304,7 +304,7 @@ public class Main {
     } else {
       System.out.println("Invalid, try again");
     }
-    System.out.println("How many times do you want to see a cow?");
+    System.out.println("How many times do you want to see a cow? Whole numbers only please.");
     int cowInt = 0;
     try {
       cowInt = decision.nextInt();
@@ -363,11 +363,12 @@ public class Main {
     System.out.println("\t 3: Division");
     System.out.println("\t 4: The remainder of a quotient");
     System.out.println("\t 5: Multiplication");
+    System.out.println("Please enter your selection as a number (1-5)");
     int calChoice = 0;
     try {
       calChoice = decision.nextInt();
     } catch (Exception ex) {
-      System.out.println("Invalid input, try again");
+      System.out.println("Invalid input, whole numbers only, try again");
     }
     switch (calChoice) {
       case 1:
@@ -398,26 +399,26 @@ public class Main {
   public static void ageGet(Scanner scanner) {
     Date date = new Date();
     System.out.println("The current date is: " + date);
-    System.out.println("Please enter the year you were born");
+    System.out.println("Please enter the year you were born, whole numbers only, format is XXXX");
     int by = 0;
     try {
       by = scanner.nextInt();
     } catch (Exception ex) {
-      System.out.println("Invalid input, try again");
+      System.out.println("Invalid input, whole numbers only, try again");
     }
-    System.out.println("Please enter the month you were born");
+    System.out.println("Please enter the month you were born, whole numbers only, format is XX.");
     int bm = 0;
     try {
       bm = scanner.nextInt();
     } catch (Exception ex) {
-      System.out.println("Invalid input, try again");
+      System.out.println("Invalid input, whole numbers only, try again");
     }
-    System.out.println("Please enter the day you were born");
+    System.out.println("Please enter the day you were born, whole numbers only, format is XX.");
     int bd = 0;
     try {
       bd = scanner.nextInt();
     } catch (Exception ex) {
-      System.out.println("Invalid input, try again");
+      System.out.println("Invalid input, whole numbers only, try again");
     }
     final UserAgeNoErrors newDate2 = new UserAgeNoErrors(bd, bm, by);
     scanner.nextLine();
@@ -425,7 +426,7 @@ public class Main {
     try {
       message1 = scanner.nextLine();
     } catch (Exception ex) {
-      System.out.println("Invalid input, try again");
+      System.out.println("Invalid input, whole numbers only, try again");
     }
     UserAgeNoErrors messageNew = new UserAgeNoErrors(message1);
     System.out.println("You entered your birthday as " + UserAgeNoErrors.getBMonth() + "/"
